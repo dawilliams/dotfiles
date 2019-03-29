@@ -5,6 +5,9 @@
 
 # Source other files
 
+# Source bash_completion.sh if it exists and is readable
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 # Get it from the original Git repo:
 # Clone the alacritty repo and follow the instructions for macOS
 # https://raw.githubusercontent.com/jwilm/alacritty/v0.2.9/alacritty-completions.bash
