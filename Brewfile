@@ -5,9 +5,9 @@ tap "homebrew/cask"
 # Mac App Store cli: https://github.com/mas-cli/mas
 brew "mas"
 
+cask "alacritty"
 cask "authy"
 brew "bash"
 brew "git"
 cask "google-chrome"
-cask "kitty"
 brew "neovim"
