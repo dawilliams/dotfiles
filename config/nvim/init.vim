@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
 
 call plug#end()
@@ -25,7 +26,8 @@ xmap <space> \
 set foldmethod=manual " set folds by syntax of current language
 set ignorecase        " ignore case in searches
 set list              " show invisible characters
-set mouse=a           " enable mouse (selection, resizing windows)
+set listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
+set mouse=a                         " enable mouse (selection, resizing windows)
 set nowrap            " nowrap by default
 set number            " Show line numbers
 set numberwidth=1     " Number of columns for showing the line number
@@ -50,7 +52,20 @@ augroup filetype_vim
 augroup END
 " }}}
 
-" Color Settings ------------------------ {{{
+" UI Customizations ------------------------ {{{
 colorscheme palenight
 let g:palenight_terminal_italics=1
 " }}}
+
+" For Neovim -------------------------------- {{{
+" Navigate neovim + neovim terminal emulator with alt+direction
+tnoremap <c-h> <C-\><C-n><C-w>h
+tnoremap <c-j> <C-\><C-n><C-w>j
+tnoremap <c-k> <C-\><C-n><C-w>k
+tnoremap <c-l> <C-\><C-n><C-w>l
+
+" easily escape terminal
+tnoremap <leader><esc> <C-\><C-n><esc><cr>
+
+" quickly toggle term
+nnoremap <silent> <leader><space> :vertical botright Ttoggle<cr><C-w>l
