@@ -1,6 +1,8 @@
 sync:
+	mkdir -p ~/.aws
 	mkdir -p ~/.config/nvim
 	mkdir -p ~/.config/alacritty
+	mkdir -p ~/.kube
 
 	[ -f ~/.bash_profile ] || ln -s $(PWD)/bash_profile ~/.bash_profile
 	[ -f ~/.bashrc ] || ln -s $(PWD)/bashrc ~/.bashrc

@@ -8,6 +8,18 @@
 # Source bash_completion.sh if it exists and is readable
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+# Get it from the original Git repo: 
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+if [ -f ~/.git-prompt.sh ]; then
+  source ~/.git-prompt.sh
+fi
+
+# Get it from the original Git repo: 
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+if [ -f ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+fi
+
 # Get it from the original Git repo:
 # Clone the alacritty repo and follow the instructions for macOS
 # https://raw.githubusercontent.com/jwilm/alacritty/v0.2.9/alacritty-completions.bash
@@ -34,6 +46,11 @@ export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx
 
 export CLICOLOR=1
 
+# enable GIT prompt options
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+
 ###############
 # Bash settings
 
@@ -41,6 +58,11 @@ export CLICOLOR=1
 
 # If we don't use the below git master one, use this simple
 PS1="\[$(tput setaf 6)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\] \$ "
+
+# 1. Git branch is being showed
+# 2. Title of terminal is changed for each new shell
+# 3. History is appended each time
+export PROMPT_COMMAND='__git_ps1 "\[$(tput setaf 6)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]" " "; echo -ne "\033]0;${PWD##*/}\007"'
 
 # -- History
 
