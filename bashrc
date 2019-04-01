@@ -5,19 +5,31 @@
 
 # Source other files
 
+if [ -f /usr/local/etc/bash_completion.d/aws_bash_completer ]; then
+  source /usr/local/etc/bash_completion.d/aws_bash_completer
+fi
+
 # Source bash_completion.sh if it exists and is readable
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-# Get it from the original Git repo: 
-# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-if [ -f ~/.git-prompt.sh ]; then
-  source ~/.git-prompt.sh
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
-# Get it from the original Git repo: 
-# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+  source /usr/local/etc/bash_completion.d/git-prompt.sh
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/kubectl ]; then
+  source /usr/local/etc/bash_completion.d/kubectl
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/kubectx ]; then
+  source /usr/local/etc/bash_completion.d/kubectx
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/kubens ]; then
+  source /usr/local/etc/bash_completion.d/kubens
 fi
 
 # Get it from the original Git repo:
