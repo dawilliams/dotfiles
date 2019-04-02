@@ -16,56 +16,67 @@ call plug#end()
 "" Don't restate NeoVim defaults.
 "" See :help nvim-defaults for more info
 
-" set leader key
-let g:mapleader="\\"
+  " set leader key
+    let g:mapleader="\\"
 
-" alias for leader key
-nmap <space> \
-xmap <space> \
+  " alias for leader key
+    nmap <space> \
+    xmap <space> \
 
-set foldmethod=manual " set folds by syntax of current language
-set ignorecase        " ignore case in searches
-set list              " show invisible characters
-set listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
-set mouse=a                         " enable mouse (selection, resizing windows)
-set nowrap            " nowrap by default
-set number            " Show line numbers
-set numberwidth=1     " Number of columns for showing the line number
-set smartcase         " use case sensitive if capital letter present or \C
-set shiftwidth=2      " Number of spaces to use for each step of (auto)indent.
-set tabstop=2         " Use 2 spaces for tabs.
-set termguicolors     " enable true colors
-set visualbell        " visual bell for errros
+    set foldmethod=manual " set folds by syntax of current language
+    set ignorecase        " ignore case in searches
+    set list              " show invisible characters
+    set listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
+    set mouse=a           " enable mouse (selection, resizing windows)
+    set nowrap            " nowrap by default
+    set number            " Show line numbers
+    set numberwidth=1     " Number of columns for showing the line number
+    set smartcase         " use case sensitive if capital letter present or \C
+    set shiftwidth=2      " Number of spaces to use for each step of (auto)indent.
+    set tabstop=2         " Use 2 spaces for tabs.
+    set termguicolors     " enable true colors
+    set visualbell        " visual bell for errros
 
-if has('persistent_undo')
-  set undofile        " persistent undo between file reloads
-endif
+    if has('persistent_undo')
+      set undofile        " persistent undo between file reloads
+    endif
 
-set splitbelow        " Open new split panes to the bottom
-set splitright        " Open new split panes to the bottom
+    set splitbelow        " Open new split panes to the bottom
+    set splitright        " Open new split panes to the bottom
 " }}}
 
 " Vim Script file settings ------------------------ {{{
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
+  augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+  augroup END
 " }}}
 
 " UI Customizations ------------------------ {{{
-colorscheme palenight
-let g:palenight_terminal_italics=1
+  colorscheme palenight
+  let g:palenight_terminal_italics=1
+" }}}
+
+"  Key Mappings -------------------------------------------------- {{{
+  " replace word under cursor, globally, with confirmation
+    nnoremap <Leader>k :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+    vnoremap <Leader>k y :%s/<C-r>"//gc<Left><Left><Left>
+
 " }}}
 
 " For Neovim -------------------------------- {{{
-" Navigate neovim + neovim terminal emulator with alt+direction
-tnoremap <c-h> <C-\><C-n><C-w>h
-tnoremap <c-j> <C-\><C-n><C-w>j
-tnoremap <c-k> <C-\><C-n><C-w>k
-tnoremap <c-l> <C-\><C-n><C-w>l
+  " interactive find replace preview
+    set inccommand=nosplit
 
-" easily escape terminal
-tnoremap <leader><esc> <C-\><C-n><esc><cr>
+  " Navigate neovim + neovim terminal emulator with alt+direction
+    tnoremap <c-h> <C-\><C-n><C-w>h
+    tnoremap <c-j> <C-\><C-n><C-w>j
+    tnoremap <c-k> <C-\><C-n><C-w>k
+    tnoremap <c-l> <C-\><C-n><C-w>l
 
-" quickly toggle term
-nnoremap <silent> <leader><space> :vertical botright Ttoggle<cr><C-w>l
+  " easily escape terminal
+    tnoremap <leader><esc> <C-\><C-n><esc><cr>
+
+  " quickly toggle term
+    nnoremap <silent> <leader><space> :vertical botright Ttoggle<cr><C-w>l
+" }}}
