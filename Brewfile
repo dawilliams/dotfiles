@@ -5,6 +5,7 @@ tap "homebrew/cask"
 # Mac App Store cli: https://github.com/mas-cli/mas
 brew "mas"
 
+brew "python"
 cask "alacritty"
 brew "awscli"
 brew "aws-iam-authenticator"

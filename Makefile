@@ -10,6 +10,8 @@ sync:
 	[ -f ~/.config/alacritty/alacritty.yml ] || ln -s $(PWD)/config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 	[ -f ~/.config/nvim/init.vim ] || ln -s $(PWD)/config/nvim/init.vim ~/.config/nvim/init.vim
 
+	pip3 install --upgrade neovim-remote 
+
 clean:
 	rm -f ~/.bash_profile
 	rm -f ~/.bashrc
