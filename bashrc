@@ -69,7 +69,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 # -- Prompt
 
 # If we don't use the below git master one, use this simple
-PS1="\[$(tput setaf 6)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\] \$ "
+#PS1="\[$(tput setaf 6)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\] \$ "
 
 # 1. Git branch is being showed
 # 2. Title of terminal is changed for each new shell
