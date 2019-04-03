@@ -1,5 +1,15 @@
 [user]
-	name = David Williams
-	email = williamsgang1@gmail.com
+  name = David Williams
+  email = williamsgang1@gmail.com
+[core]
+  editor = nvr --remote-wait-silent
+[diff]
+  tool = nvr
+[difftool "nvr"]
+  cmd = nvr -s -d $LOCAL $REMOTE
+[merge]
+  tool = nvr
+[mergetool "nvr"]
+  cmd = nvr -s -d $LOCAL $BASE $REMOTE $MERGED -c 'wincmd J | wincmd ='
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
