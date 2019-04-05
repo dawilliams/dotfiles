@@ -51,7 +51,7 @@ alias vim='nvim'
 ###############
 # Exports (custom)
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # checkout `man ls` for the meaning
 export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx
