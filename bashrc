@@ -5,6 +5,10 @@
 
 # Source other files
 
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
+
 if [ -f /usr/local/etc/bash_completion.d/aws_bash_completer ]; then
   source /usr/local/etc/bash_completion.d/aws_bash_completer
 fi
@@ -38,15 +42,6 @@ fi
 if [ -f ~/alacritty-completions.bash ]; then
   source ~/alacritty-completions.bash
 fi
-
-###############
-# Aliases (custom)
-alias ..='cd ..'
-alias ls='ls -GpF' # Mac OSX specific
-alias ll='ls -alGpF' # Mac OSX specific
-
-alias vi='nvim'
-alias vim='nvim'
 
 ###############
 # Exports (custom)

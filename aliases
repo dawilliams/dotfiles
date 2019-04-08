@@ -1,0 +1,37 @@
+# aws-vault
+alias av='aws-vault'
+
+# docker-compose
+alias dce='docker-compose'
+
+# git
+alias g='git'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcm='git commit -m'
+alias gcma='git commit -am'
+alias gpl='git pull -r'
+alias gph='git push -v origin'
+alias gphu='git push -vu origin $(git branch | awk "/^\* / { print \$2 }")'
+alias gsh='git stash'
+alias gst='git status'
+
+# howdoi (pip install howdoi) https://github.com/gleitz/howdoi
+alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+
+# unix
+alias ..='cd ..'
+alias ll='ls -alGpF' # Mac OSX specific
+alias ls='ls -GpF' # Mac OSX specific
+alias mkdir='mkdir -p'
+alias path='echo $PATH | tr -s ":" "\n"' # Pretty print the path
+# vim
+alias vi='nvim'
+alias vim='nvim'
+
+# weather
+alias wttr='curl -4 http://wttr.in/birmingham,alabama'
+
+# KEEP AT BOTTOM TO ALLOW OVERRIDE
+# Include machine specific aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

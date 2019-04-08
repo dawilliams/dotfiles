@@ -65,6 +65,12 @@ call plug#end()
 " }}}
 
 " For Neovim -------------------------------- {{{
+  " use neovim-remote (pip3 install neovim-remote) allows
+  " opening a new split inside neovim instead of nesting
+  " neovim processes for git commit
+    let $GIT_EDITOR  = 'nvr -cc split --remote-wait +"setlocal bufhidden=delete"'
+    let $EDITOR      = 'nvr -l'
+
   " interactive find replace preview
     set inccommand=nosplit
 
