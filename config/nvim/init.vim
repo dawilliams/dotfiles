@@ -12,7 +12,7 @@ Plug 'mhinz/vim-startify'
 
 call plug#end()
 
-"  Behavior Modification ----------------------  {{{
+"  Behavior Modification ---------------------------------------  {{{
 "" Don't restate NeoVim defaults.
 "" See :help nvim-defaults for more info
 
@@ -45,17 +45,21 @@ call plug#end()
     set splitright        " Open new split panes to the bottom
 " }}}
 
-" Vim Script file settings ------------------------ {{{
+" Vim Script file settings --------------------------------------- {{{
   augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
   augroup END
 " }}}
 
-" UI Customizations ------------------------ {{{
+" UI Customizations ---------------------------------------------- {{{
   colorscheme palenight
   let g:palenight_terminal_italics=1
 " }}}
+
+" Auto Commands -------------------------------------------------- {{{
+  autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy  " set groovy syntax for Jenkinsfiles
+"  }}}
 
 "  Key Mappings -------------------------------------------------- {{{
   " replace word under cursor, globally, with confirmation
@@ -64,7 +68,7 @@ call plug#end()
 
 " }}}
 
-" For Neovim -------------------------------- {{{
+" For Neovim ------------------------------------------------------ {{{
   " use neovim-remote (pip3 install neovim-remote) allows
   " opening a new split inside neovim instead of nesting
   " neovim processes for git commit
