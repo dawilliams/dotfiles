@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -34,6 +35,7 @@ call plug#end()
     set smartcase         " use case sensitive if capital letter present or \C
     set shiftwidth=2      " Number of spaces to use for each step of (auto)indent.
     set tabstop=2         " Use 2 spaces for tabs.
+    set expandtab         " insert tab with right amount of spacing
     set termguicolors     " enable true colors
     set visualbell        " visual bell for errros
 
