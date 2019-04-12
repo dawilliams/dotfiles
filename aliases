@@ -6,8 +6,12 @@ alias dce='docker-compose'
 
 # git
 alias g='git'
+## Prune or purge local merged branches except for current, master and development.
+alias gbrp='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "development" | xargs -n 1 git branch -d'
 alias gco='git checkout'
 alias gcob='git checkout -b'
+alias gcod='git checkout development'
+alias gcom='git checkout master'
 alias gcm='git commit -m'
 alias gcma='git commit -am'
 alias gpl='git pull -r'
