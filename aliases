@@ -1,5 +1,6 @@
 # aws-vault
 alias av='aws-vault'
+alias ave='aws-vault exec'
 
 # docker-compose
 alias dce='docker-compose'
@@ -16,12 +17,19 @@ alias gcm='git commit -m'
 alias gcma='git commit -am'
 alias gpl='git pull -r'
 alias gph='git push -v origin'
+## Set upstream with push
 alias gphu='git push -vu origin $(git branch | awk "/^\* / { print \$2 }")'
 alias gsh='git stash'
 alias gst='git status'
 
 # howdoi (pip install howdoi) https://github.com/gleitz/howdoi
 alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+
+# platformctl
+alias p='platformctl'
+alias pcgp='platformctl config getpath'
+alias pcep='platformctl config editpath'
+alias psr='platformctl service restart'
 
 # unix
 alias ..='cd ..'
