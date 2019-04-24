@@ -103,6 +103,10 @@ export GLOBIGNORE='.DS_Store:*.o:*.pyc'
 
 # -- Functions
 
+ave () {
+    aws-vault exec $1 --assume-role-ttl=1h
+}
+
 # extracts the given file
 x () {
     if [ -f $1 ] ; then

@@ -1,6 +1,6 @@
 # aws-vault
 alias av='aws-vault'
-alias ave='aws-vault exec'
+#alias ave='aws-vault exec'
 
 # docker-compose
 alias dce='docker-compose'
