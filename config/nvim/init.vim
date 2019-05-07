@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'hashivim/vim-terraform'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'junegunn/goyo.vim'
@@ -67,6 +68,12 @@ call plug#end()
     let g:UltiSnipsListSnippets="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<c-f>"
     let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+  " ====================================
+  " Terraform
+  " ====================================
+    let g:terraform_fmt_on_save=1
+" }}}
 
 " Vim Script file settings --------------------------------------- {{{
   augroup filetype_vim
