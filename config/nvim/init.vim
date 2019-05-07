@@ -11,6 +11,7 @@ Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'justinmk/vim-dirvish'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
 Plug 'SirVer/ultisnips'
