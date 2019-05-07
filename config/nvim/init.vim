@@ -7,8 +7,13 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'honza/vim-snippets'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
+Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
@@ -46,6 +51,21 @@ call plug#end()
     set splitbelow        " Open new split panes to the bottom
     set splitright        " Open new split panes to the bottom
 " }}}
+
+" Plugin Modifications --------------------------------------------------- {{{
+  " ====================================
+  " goyo.vim + limelight.vim
+  " ====================================
+    autocmd! User GoyoEnter Limelight
+    autocmd! User GoyoLeave Limelight!
+
+  " ====================================
+  " Snippets (UltiSnips):
+  " ====================================
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsListSnippets="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-f>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " Vim Script file settings --------------------------------------- {{{
   augroup filetype_vim
