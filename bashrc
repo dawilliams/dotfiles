@@ -47,6 +47,8 @@ fi
 # Exports (custom)
 
 export EDITOR="nvim"
+export VAULT_ADDR='https://vault-east.shipttech.com'
+#export VAULT_ADDR='https://vault-east.staging.shipttech.com'
 
 # checkout `man ls` for the meaning
 export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx
