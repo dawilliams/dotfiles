@@ -1,6 +1,5 @@
 # aws-vault
 alias av='aws-vault'
-#alias ave='aws-vault exec'
 
 # docker-compose
 alias dce='docker-compose'
@@ -25,6 +24,9 @@ alias gst='git status'
 # howdoi (pip install howdoi) https://github.com/gleitz/howdoi
 alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
 
+# kitty
+alias kssh='kitty +kitten ssh'
+
 # platformctl
 alias p='platformctl'
 alias pcgp='platformctl config getpath'
@@ -33,10 +35,15 @@ alias psr='platformctl service restart'
 
 # unix
 alias ..='cd ..'
+alias cdg='cd ~/git'
 alias ll='ls -alGpF' # Mac OSX specific
 alias ls='ls -GpF' # Mac OSX specific
 alias mkdir='mkdir -p'
 alias path='echo $PATH | tr -s ":" "\n"' # Pretty print the path
+
+# vault
+alias vlo='vault login -method=okta username=dwilliams@shipt.com'
+
 # vim
 alias vi='nvim'
 alias vim='nvim'
