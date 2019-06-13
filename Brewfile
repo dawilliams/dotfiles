@@ -6,7 +6,6 @@ tap "homebrew/cask"
 brew "mas"
 
 brew "python"
-cask "alacritty"
 brew "awscli"
 brew "aws-iam-authenticator"
 cask "aws-vault"
