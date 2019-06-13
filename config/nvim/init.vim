@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
@@ -16,6 +15,7 @@ Plug 'justinmk/vim-dirvish'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
 Plug 'neomake/neomake'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 
@@ -89,8 +89,8 @@ call plug#end()
 " }}}
 
 " UI Customizations ---------------------------------------------- {{{
-  colorscheme palenight
-  let g:palenight_terminal_italics=1
+  set background=dark
+  colorscheme PaperColor
 " }}}
 
 " Auto Commands -------------------------------------------------- {{{
