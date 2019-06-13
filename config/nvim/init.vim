@@ -15,6 +15,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
+Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 
@@ -60,6 +61,11 @@ call plug#end()
   " ====================================
     autocmd! User GoyoEnter Limelight
     autocmd! User GoyoLeave Limelight!
+
+  " ====================================
+  " Neomake
+  " ====================================
+    call neomake#configure#automake('w')
 
   " ====================================
   " Snippets (UltiSnips):
