@@ -14,6 +14,8 @@ alias gcod='git checkout development'
 alias gcom='git checkout master'
 alias gcm='git commit -m'
 alias gcma='git commit -am'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gpl='git pull -r'
 alias gph='git push -v origin'
 ## Set upstream with push
@@ -32,6 +34,11 @@ alias p='platformctl'
 alias pcgp='platformctl config getpath'
 alias pcep='platformctl config editpath'
 alias psr='platformctl service restart'
+
+# terramform
+alias t='terraform'
+alias ti='terraform init'
+alias tp='terraform plan'
 
 # unix
 alias ..='cd ..'
