@@ -3,6 +3,7 @@
   email = williamsgang1@gmail.com
 [core]
   editor = nvr --remote-wait-silent
+	excludesfile = ~/.gitignore_global
 [diff]
   tool = nvr
 [difftool "nvr"]
