@@ -1,4 +1,6 @@
 {
+  "solargraph.commandPath": "/Users/dwilliams/.gem/ruby/2.5.5/bin/solargraph",
+
   "languageserver": {
     "golang": {
       "command": "/Users/dwilliams/go/bin/gopls",
