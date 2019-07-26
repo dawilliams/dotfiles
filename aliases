@@ -1,6 +1,11 @@
 # aws-vault
 alias av='aws-vault'
 
+# docker
+alias d='docker'
+alias dr='docker run'
+alias drav='docker run -e AWS_SECRET_ACCESS_KEY -e AWS_ACCESS_KEY_ID -e AWS_SESSION_TOKEN -e AWS_SECURITY_TOKEN'
+
 # docker-compose
 alias dce='docker-compose'
 
@@ -28,6 +33,11 @@ alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
 
 # kitty
 alias kssh='kitty +kitten ssh'
+
+# kubernetes
+alias kl='kubectl'
+alias ks='kubens'
+alias kx='kubectx'
 
 # platformctl
 alias p='platformctl'
