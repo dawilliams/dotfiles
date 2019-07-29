@@ -5,3 +5,4 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
 export PATH=$PATH:/Users/dwilliams/go/bin
+export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
