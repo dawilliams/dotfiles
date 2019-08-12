@@ -1,7 +1,10 @@
 # Homebrew Bundle file: https://github.com/Homebrew/homebrew-bundle
+
 # Homebrew Cask setup
 cask_args appdir: "/Applications"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+
 # Mac App Store cli: https://github.com/mas-cli/mas
 brew "mas"
 
@@ -18,11 +21,13 @@ cask "docker"
 brew "git"
 brew "golang"
 cask "google-chrome"
+cask "font-fira-code"
 brew "jq"
 cask "kitty"
 brew "kubectl"
 brew "kops"
 brew "kubectx"
+brew "kubernetes-helm"
 brew "kubeseal"
 brew "libpq", link: true, conflicts_with: ["postgres"]   # psql client
 brew "neovim"
