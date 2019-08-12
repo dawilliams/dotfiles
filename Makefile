@@ -5,6 +5,7 @@ sync:
 	mkdir -p ~/.kube
 
 	[ -f ~/.aliases ] || ln -s $(PWD)/aliases ~/.aliases
+	[ -f ~/.bash_completion ] || ln -s $(PWD)/bash_completion ~/.bash_completion
 	[ -f ~/.bash_profile ] || ln -s $(PWD)/bash_profile ~/.bash_profile
 	[ -f ~/.bashrc ] || ln -s $(PWD)/bashrc ~/.bashrc
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/gitconfig ~/.gitconfig
@@ -18,6 +19,7 @@ sync:
 
 clean:
 	rm -f ~/.aliases
+	rm -f ~/.bash_completion
 	rm -f ~/.bash_profile
 	rm -f ~/.bashrc
 	rm -f ~/.gitconfig
