@@ -27,7 +27,7 @@ cask "kitty"
 brew "kubectl"
 brew "kops"
 brew "kubectx"
-brew "kubernetes-helm"
+#brew "kubernetes-helm"
 brew "kubeseal"
 brew "libpq", link: true, conflicts_with: ["postgres"]   # psql client
 brew "neovim"
