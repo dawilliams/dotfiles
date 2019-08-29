@@ -7,4 +7,5 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
 export PATH=$PATH:$HOME/go/bin
+export GOPATH=$HOME/go
 export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
