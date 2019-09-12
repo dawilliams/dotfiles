@@ -11,7 +11,7 @@
 - Add AWS `credentials` and `config` files
 - Add kube `config` file
 - Copy `terraformrc\_template` to `~/.terraformrc` and update the token
-- Add export `ATLAS\_TOKEN` in `bash\_profile`
+- Add export `ATLAS_TOKEN`, `DRONE_SERVER` and `DRONE_TOKEN` in `bash_profile`
 - Restart kitty
 
 ## Notes
