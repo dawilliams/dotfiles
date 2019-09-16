@@ -15,7 +15,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
-Plug 'neoclide/coc.nvim', {'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neomake/neomake'
 Plug 'NLKNguyen/papercolor-theme'
 " Plug 'SirVer/ultisnips'
