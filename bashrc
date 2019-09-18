@@ -109,6 +109,31 @@ ave () {
     aws-vault exec $1 --assume-role-ttl=1h
 }
 
+sts () {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the name of the local AWS profile to assume or 'clear' to delete AWS role credentials environment variables."
+    return 1
+  fi
+
+  if [[ "$1" == "clear" ]] 
+  then
+    echo "Clearing AWS role credentials environment variables"
+    unset AWS_PROFILE AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN AWS_SECURITY_TOKEN
+  else
+    role_arn=$(aws configure get role_arn --profile $1)
+    source_profile=$(aws configure get source_profile --profile $1)
+    json=$(aws sts assume-role --role-arn "$role_arn" --role-session-name "dwilliams-laptop" --profile "$source_profile")
+
+    export AWS_ACCESS_KEY_ID=$(echo $json | jq -r '.Credentials | .AccessKeyId')
+    export AWS_SECRET_ACCESS_KEY=$(echo $json | jq -r '.Credentials | .SecretAccessKey')
+    export AWS_SESSION_TOKEN=$(echo $json | jq -r '.Credentials | .SessionToken')
+
+    echo "Assumed Role: $(echo $json | jq -r '.AssumedRoleUser | .Arn')"
+    echo "Expires: $(echo $json | jq -r '.Credentials | .Expiration')"
+  fi
+}
+
 # extracts the given file
 x () {
     if [ -f $1 ] ; then
