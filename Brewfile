@@ -17,6 +17,7 @@ brew "bash"
 brew "bash-completion@2"
 brew "chruby"
 mas "com.amazon.Kindle", id: 405399194
+brew "dep"
 cask "docker"
 brew "drone"
 brew "git"
