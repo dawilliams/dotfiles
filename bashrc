@@ -14,7 +14,17 @@ if [ -f /usr/local/etc/bash_completion.d/aws_bash_completer ]; then
 fi
 
 # Source bash_completion.sh if it exists and is readable
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]]; then
+  source "/usr/local/etc/profile.d/bash_completion.sh"
+fi
+
+if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+fi
+
+if [ -f /usr/local/opt/chruby/share/chruby/auto.sh ]; then
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   source /usr/local/etc/bash_completion.d/git-completion.bash
@@ -46,9 +56,15 @@ fi
 ###############
 # Exports (custom)
 
-export EDITOR="nvim"
 export VAULT_ADDR='https://vault-east.shipttech.com'
 #export VAULT_ADDR='https://vault-east.staging.shipttech.com'
+
+## Open nvr if in a nvim terminal
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+  export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+else
+  export VISUAL="nvim"
+fi
 
 # checkout `man ls` for the meaning
 export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx
@@ -59,6 +75,10 @@ export CLICOLOR=1
 export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
+
+export GOPATH=$HOME/go
+export GOPRIVATE="github.com/shipt/*"
+export PATH=$PATH:$HOME/go/bin
 
 ###############
 # Bash settings
@@ -71,7 +91,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 # 1. Git branch is being showed
 # 2. Title of terminal is changed for each new shell
 # 3. History is appended each time
-export PROMPT_COMMAND='__git_ps1 "\[$(tput setaf 6)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]" " "; echo -ne "\033]0;${PWD##*/}\007"'
+export PROMPT_COMMAND='__git_ps1 "(\[$(tput setaf 1)\]$(get_cluster_short $(kxc))\[$(tput sgr0)\]:\[$(tput setaf 6)\]$(ksc)\[$(tput sgr0)\]) \[$(tput setaf 3)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]" "\n\$ "'
 
 # -- History
 
@@ -105,8 +125,33 @@ export GLOBIGNORE='.DS_Store:*.o:*.pyc'
 
 # -- Functions
 
-ave () {
-    aws-vault exec $1 --assume-role-ttl=1h
+aoe () {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the name of the local AWS profile to assume or type 'clear' to delete AWS Okta role credentials environment variables."
+    return 1
+  fi
+
+  if [[ "$1" == "clear" ]] 
+  then
+    echo "Clearing AWS Okta role credentials environment variables"
+    unset AWS_OKTA_ASSUMED_ROLE AWS_OKTA_PROFILE AWS_SECRET_ACCESS_KEY AWS_OKTA_ASSUMED_ROLE_ARN AWS_ACCESS_KEY_ID AWS_SESSION_TOKEN AWS_SESSION_START_TIME AWS_SECURITY_TOKEN
+  else
+    export AWS_SESSION_START_TIME=$(date +%H:%M)
+    $(aws-okta env $1)
+  fi
+}
+
+function get_cluster_short() {
+  echo "$1" | cut -d . -f1
+}
+
+sr () {
+  echo "$(tput setaf 2)UTC Time:               $(tput sgr 0)$(date -u +%H:%M)"
+  echo "$(tput setaf 3)AWS Okta Profile:       $(tput sgr 0)$AWS_OKTA_PROFILE"
+  echo "$(tput setaf 3)AWS Session Start Time: $(tput sgr 0)$AWS_SESSION_START_TIME"
+  echo "$(tput setaf 6)K8s Cluster:            $(tput sgr 0)$(kubectx --current)"
+  echo "$(tput setaf 6)K8s Namespace:          $(tput sgr 0)$(kubens --current)"
 }
 
 sts () {

@@ -1,3 +1,8 @@
+# aws-okta
+alias ao='aws-okta'
+alias aol='aws-okta login shipt-accounts'
+alias aop='echo AWS_OKTA_PROFILE=$AWS_OKTA_PROFILE'
+
 # aws-vault
 alias av='aws-vault'
 
@@ -37,11 +42,15 @@ alias kssh='kitty +kitten ssh'
 # kubernetes
 alias kl='kubectl'
 alias ks='kubens'
+alias ksc='kubens -c'
 alias kx='kubectx'
+alias kxc='kubectx -c'
 
 # platformctl
 alias p='platformctl'
+alias pcg='platformctl config get'
 alias pcgp='platformctl config getpath'
+alias pce='platformctl config edit'
 alias pcep='platformctl config editpath'
 alias psr='platformctl service restart'
 
