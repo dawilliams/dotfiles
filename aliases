@@ -1,7 +1,8 @@
 # aws-okta
 alias ao='aws-okta'
 alias aol='aws-okta login shipt-accounts'
-alias aop='echo AWS_OKTA_PROFILE=$AWS_OKTA_PROFILE'
+alias aopv='echo $AWS_OKTA_PROFILE'
+alias aosev='date -r $AWS_OKTA_SESSION_EXPIRATION +%H:%M'
 
 # aws-vault
 alias av='aws-vault'

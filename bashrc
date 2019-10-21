@@ -91,7 +91,7 @@ export PATH=$PATH:$HOME/go/bin
 # 1. Git branch is being showed
 # 2. Title of terminal is changed for each new shell
 # 3. History is appended each time
-export PROMPT_COMMAND='__git_ps1 "(\[$(tput setaf 1)\]$(get_cluster_short $(kxc))\[$(tput sgr0)\]:\[$(tput setaf 6)\]$(ksc)\[$(tput sgr0)\]) \[$(tput setaf 3)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]" "\n\$ "'
+export PROMPT_COMMAND='__git_ps1 "($(display_aws_okta_profile)\[$(tput setaf 1)\]$(get_cluster_short $(kxc))\[$(tput sgr0)\]:\[$(tput setaf 6)\]$(ksc)\[$(tput sgr0)\]) \[$(tput setaf 3)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]" "\n\$ "'
 
 # -- History
 
@@ -135,10 +135,19 @@ aoe () {
   if [[ "$1" == "clear" ]] 
   then
     echo "Clearing AWS Okta role credentials environment variables"
-    unset AWS_OKTA_ASSUMED_ROLE AWS_OKTA_PROFILE AWS_SECRET_ACCESS_KEY AWS_OKTA_ASSUMED_ROLE_ARN AWS_ACCESS_KEY_ID AWS_SESSION_TOKEN AWS_SESSION_START_TIME AWS_SECURITY_TOKEN
+    unset AWS_OKTA_ASSUMED_ROLE AWS_OKTA_PROFILE AWS_SECRET_ACCESS_KEY AWS_OKTA_ASSUMED_ROLE_ARN AWS_ACCESS_KEY_ID AWS_SESSION_TOKEN AWS_OKTA_SESSION_EXPIRATION AWS_SECURITY_TOKEN
   else
-    export AWS_SESSION_START_TIME=$(date +%H:%M)
     $(aws-okta env $1)
+  fi
+}
+
+function display_aws_okta_profile() {
+  if [ -z ${AWS_OKTA_PROFILE+x} ]
+  then
+    echo ""
+  else
+    #echo "$(date +%H:%M)|\[$(tput setaf 3)\]$(aopv)\[$(tput sgr0)\]|\[$(tput setaf 3)\]$(aosev)\[$(tput sgr0)\] "
+    echo "$(date +%H:%M)|\[$(tput setaf 3)\]$(aopv)\[$(tput sgr0)\]|$(aosev) "
   fi
 }
 
