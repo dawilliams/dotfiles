@@ -91,7 +91,7 @@ export PATH=$PATH:$HOME/go/bin
 # 1. Git branch is being showed
 # 2. Title of terminal is changed for each new shell
 # 3. History is appended each time
-export PROMPT_COMMAND='__git_ps1 "(\[$(tput setaf 1)\]$(get_cluster_short $(kxc))\[$(tput sgr0)\]:\[$(tput setaf 6)\]$(ksc)\[$(tput sgr0)\]) \[$(tput setaf 3)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]" "\n\$ "'
+export PROMPT_COMMAND='__git_ps1 "(\[$(tput setaf 1)\]$(get_cluster_short $(kxc))\[$(tput sgr0)\]:\[$(tput setaf 6)\]$(ksc)\[$(tput sgr0)\]) \[$(tput setaf 3)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]" "\n\$ "'
 
 # -- History
 
@@ -147,11 +147,13 @@ function get_cluster_short() {
 }
 
 sr () {
-  echo "$(tput setaf 2)UTC Time:               $(tput sgr 0)$(date -u +%H:%M)"
-  echo "$(tput setaf 3)AWS Okta Profile:       $(tput sgr 0)$AWS_OKTA_PROFILE"
-  echo "$(tput setaf 3)AWS Session Start Time: $(tput sgr 0)$AWS_SESSION_START_TIME"
-  echo "$(tput setaf 6)K8s Cluster:            $(tput sgr 0)$(kubectx --current)"
-  echo "$(tput setaf 6)K8s Namespace:          $(tput sgr 0)$(kubens --current)"
+  echo "$(tput setaf 2)Pacific Time:                $(tput sgr 0)$(TZ=America/Los_Angeles date +%H:%M)"
+  echo "$(tput setaf 2)Central Time:                $(tput sgr 0)$(date +%H:%M)"
+  echo "$(tput setaf 2)UTC Time:                    $(tput sgr 0)$(date -u +%H:%M)"
+  echo "$(tput setaf 3)AWS Okta Profile:            $(tput sgr 0)$AWS_OKTA_PROFILE"
+  echo "$(tput setaf 3)AWS Session Expiration Time: $(tput sgr 0)$(date -r $AWS_OKTA_SESSION_EXPIRATION +%H:%M)"
+  echo "$(tput setaf 6)K8s Cluster:                 $(tput sgr 0)$(kubectx --current)"
+  echo "$(tput setaf 6)K8s Namespace:               $(tput sgr 0)$(kubens --current)"
 }
 
 sts () {
