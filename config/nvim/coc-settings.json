@@ -1,11 +1,16 @@
 {
-  "solargraph.commandPath": "/Users/dwilliams/.gem/ruby/2.5.5/bin/solargraph",
-
   "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
-  }
+  },
+  "solargraph.commandPath": "/Users/dwilliams/.gem/ruby/2.5.5/bin/solargraph"
 }
