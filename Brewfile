@@ -16,6 +16,7 @@ brew "aws-okta"
 cask "authy"
 brew "bash"
 brew "bash-completion@2"
+cask "basictex"
 brew "chruby"
 mas "com.amazon.Kindle", id: 405399194
 brew "dep"
