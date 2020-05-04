@@ -1,60 +1,50 @@
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" For this method of minpac to work, this file must reloadable
+" See https://github.com/k-takata/minpac#load-minpac-on-demand for more
+" details.
+
+if exists('*minpac#init')
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+  call minpac#add('AndrewRadev/splitjoin.vim')
+  call minpac#add('Glench/Vim-Jinja2-Syntax')
+  call minpac#add('NLKNguyen/papercolor-theme')
+  call minpac#add('SirVer/ultisnips')
+  call minpac#add('chr4/nginx.vim')
+  call minpac#add('fatih/vim-go', {'do': 'GoUpdateBinaries'})
+  call minpac#add('iamcco/markdown-preview.nvim', { 'do': '!cd app & yarn install'})
+  call minpac#add('junegunn/fzf', {'do': '!./install --bin'})
+  call minpac#add('junegunn/fzf.vim')
+  call minpac#add('kassio/neoterm')
+  call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+  call minpac#add('sebdah/vim-delve')
+  call minpac#add('tpope/vim-dotenv')
+  call minpac#add('tpope/vim-unimpaired')
+  call minpac#add('tpope/vim-vinegar')
 endif
-
-call plug#begin('~/.local/share/nvim/plugged')
-
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'hashivim/vim-terraform'
-" Plug 'honza/vim-snippets'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'justinmk/vim-dirvish'
-Plug 'kassio/neoterm'
-Plug 'mhinz/vim-startify'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neomake/neomake'
-Plug 'NLKNguyen/papercolor-theme'
-" Plug 'SirVer/ultisnips'
-Plug 'tpope/vim-fugitive'
-
-call plug#end()
 
 "  Behavior Modification ---------------------------------------  {{{
 "" Don't restate NeoVim defaults.
 "" See :help nvim-defaults for more info
+    let mapleader=","       " set leader key
 
-  " set leader key
-    let g:mapleader="\\"
-
-  " alias for leader key
-    nmap <space> \
-    xmap <space> \
-
-    set foldmethod=manual " set folds by syntax of current language
-    set ignorecase        " ignore case in searches
-    set list              " show invisible characters
+    set autowrite           " save changes to file while closing it. Also used in vim-go
+    set expandtab           " insert tab with right amount of spacing
+    set list                " show invisible characters
     set listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
-    set mouse=a           " enable mouse (selection, resizing windows)
-    set nowrap            " nowrap by default
-    set number            " Show line numbers
-    set numberwidth=1     " Number of columns for showing the line number
-    set smartcase         " use case sensitive if capital letter present or \C
-    set shiftwidth=2      " Number of spaces to use for each step of (auto)indent.
-    set tabstop=2         " Use 2 spaces for tabs.
-    set expandtab         " insert tab with right amount of spacing
-    set termguicolors     " enable true colors
-    set visualbell        " visual bell for errros
+    set shiftwidth=2        " Number of spaces to use for each step of (auto)indent.
+    set splitright          " Open new split panes to the right
+    set splitbelow          " Open new split panes to the bottom
+    set tabstop=2           " Use 2 spaces for tabs.
+    set visualbell          " flash screen instead of beep sound on errors
 
-    if has('persistent_undo')
-      set undofile        " persistent undo between file reloads
+    if has('termguicolors')
+      set termguicolors     " enable true colors
     endif
 
-    set splitbelow        " Open new split panes to the bottom
-    set splitright        " Open new split panes to the bottom
+    if has('persistent_undo')
+      set undofile          " persistent undo between file reloads
+    endif
 " }}}
 
 " Plugin Modifications --------------------------------------------------- {{{
@@ -125,6 +115,19 @@ call plug#end()
     nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
   " ====================================
+  " fzf.vim
+  " ====================================
+    " do not use fzf built-in Rg command since it also searches within filenames.
+    command! -bang -nargs=* Rg
+          \ call fzf#vim#grep(
+            \ 'rg --column --line-number --no-ignore-vcs --hidden '
+              \ . '--smart-case --no-heading --color=always '
+              \ . shellescape(<q-args>),
+            \ 1,
+            \ {'options':  '--delimiter : --nth 4..'},
+            \ 0)
+
+  " ====================================
   " go.vim
   " ====================================
     " disable vim-go :GoDef short cut (gd)
@@ -135,36 +138,32 @@ call plug#end()
     " This manages your imports and runs gofmt
     let g:go_fmt_command = "goimports"
 
-  " ====================================
-  " goyo.vim + limelight.vim
-  " ====================================
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave Limelight!
+    " run :GoBuild or :GoTestCompile based on go file
+    function! s:build_go_files()
+      let l:file = expand('%')
+      if l:file =~# '^\f\+_test\.go$'
+        call go#test#Test(0, 1)
+      elseif l:file =~# '^\f\+\.go$'
+        call go#cmd#Build(0)
+      endif
+    endfunction
 
-  " ====================================
-  " Neomake
-  " ====================================
-    "call neomake#configure#automake('w')
-
-  " ====================================
-  " Snippets (UltiSnips):
-  " ====================================
-  "  let g:UltiSnipsExpandTrigger="<tab>"
-  "  let g:UltiSnipsListSnippets="<tab>"
-  "  let g:UltiSnipsJumpForwardTrigger="<c-f>"
-  "  let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
-  " ====================================
-  " Terraform
-  " ====================================
-    let g:terraform_fmt_on_save=1
+    augroup golang
+      autocmd!
+      autocmd Filetype go setlocal tabstop=4 shiftwidth=4 softtabstop=4
+      autocmd FileType go setlocal foldmethod=syntax
+      autocmd Filetype go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+      autocmd Filetype go nmap <leader>c :<C-u>GoCoverageToggle<CR>
+      autocmd Filetype go nmap <leader>r :<C-u>GoRun<CR>
+      autocmd Filetype go nmap <leader>t :<C-u>GoTest<CR>
+    augroup END
 " }}}
 
 " Vim Script file settings --------------------------------------- {{{
-  augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-  augroup END
+    augroup filetype_vim
+      autocmd!
+      autocmd FileType vim setlocal foldmethod=marker
+    augroup END
 " }}}
 
 " UI Customizations ---------------------------------------------- {{{
@@ -174,24 +173,26 @@ call plug#end()
 
 " Auto Commands -------------------------------------------------- {{{
   autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy  " set groovy syntax for Jenkinsfiles
+  autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+  " ts - show existing tab with 4 spaces width
+  " sw - when indenting with '>', use 4 spaces width
+  " sts - control <tab> and <bs> keys to match tabstop
+"  }}}
+
+" Commands ------------------------------------------------------- {{{
+  command! PackClean packadd minpac | source $MYVIMRC | call minpac#clean()
+  command! PackStatus packadd minpac | source $MYVIMRC |call minpac#status()
+  command! PackUpdate packadd minpac | source $MYVIMRC |call minpac#update('', {'do': 'call minpac#status()'})
 "  }}}
 
 "  Key Mappings -------------------------------------------------- {{{
-  " replace word under cursor, globally, with confirmation
-    nnoremap <Leader>k :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
-    vnoremap <Leader>k y :%s/<C-r>"//gc<Left><Left><Left>
-
+  nnoremap <C-p> :<C-u>FZF<CR>
 " }}}
 
 " For Neovim ------------------------------------------------------ {{{
-  " use neovim-remote (pip3 install neovim-remote) allows
-  " opening a new split inside neovim instead of nesting
-  " neovim processes for git commit
-    let $GIT_EDITOR  = 'nvr -cc split --remote-wait +"setlocal bufhidden=delete"'
-    let $EDITOR      = 'nvr -l'
-
-  " interactive find replace preview
-    set inccommand=nosplit
+  if has('nvim') && executable('nvr')
+    let $VISUAL = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
+  endif
 
   " Navigate neovim + neovim terminal emulator with alt+direction
     tnoremap <c-h> <C-\><C-n><C-w>h
@@ -202,6 +203,6 @@ call plug#end()
   " easily escape terminal
     tnoremap <leader><esc> <C-\><C-n><esc><cr>
 
-  " quickly toggle term
+  " quickly toggle terminal
     nnoremap <silent> <leader><space> :vertical botright Ttoggle<cr><C-w>l
 " }}}

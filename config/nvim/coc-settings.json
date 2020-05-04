@@ -6,11 +6,32 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
     }
   },
+  "yaml.schemas": {
+    "http://json.schema.org/drone.json": [
+      ".drone.yml",
+      ".drone.yaml"
+    ],
+    "https://infraspec-json-schema.shipttech.com/spec": [
+      "infraspec.yaml",
+            "infraspec.yml"
+    ]
+  },
+  "yaml.trace.server": "verbose",
   "solargraph.commandPath": "/Users/dwilliams/.gem/ruby/2.5.5/bin/solargraph"
 }

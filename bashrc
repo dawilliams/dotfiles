@@ -56,6 +56,7 @@ fi
 ###############
 # Exports (custom)
 
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 export VAULT_ADDR='https://vault-east.shipttech.com'
 #export VAULT_ADDR='https://vault-east.staging.shipttech.com'
 
@@ -79,6 +80,8 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GOPATH=$HOME/go
 export GOPRIVATE="github.com/shipt/*"
 export PATH=$PATH:$HOME/go/bin
+
+export PATH=$PATH:$HOME/.config/nvim/pack/minpac/start/fzf/bin
 
 ###############
 # Bash settings
@@ -141,7 +144,7 @@ aoe () {
   fi
 }
 
-function display_aws_okta_profile() {
+display_aws_okta_profile() {
   if [ -z ${AWS_OKTA_PROFILE+x} ]
   then
     echo ""
@@ -151,8 +154,13 @@ function display_aws_okta_profile() {
   fi
 }
 
-function get_cluster_short() {
+get_cluster_short() {
   echo "$1" | cut -d . -f1
+}
+
+# howdoi (pip install howdoi) https://github.com/gleitz/howdoi
+hdi() { 
+  howdoi $* -c -n 5;
 }
 
 sr () {
