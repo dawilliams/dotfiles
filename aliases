@@ -7,6 +7,9 @@ alias aosev='date -r $AWS_OKTA_SESSION_EXPIRATION +%H:%M'
 # aws-vault
 alias av='aws-vault'
 
+# VS Code
+alias c='code'
+
 # docker
 alias d='docker'
 alias dr='docker run'
@@ -34,8 +37,14 @@ alias gphu='git push -vu origin $(git branch | awk "/^\* / { print \$2 }")'
 alias gsh='git stash'
 alias gst='git status'
 
-# howdoi (pip install howdoi) https://github.com/gleitz/howdoi
-alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+# helm
+alias h='helm --tiller-namespace '
+alias hdp='helm delete --purge --tiller-namespace '
+alias hh='helm history --tiller-namespace '
+alias hi='helm inspect --tiller-namespace '
+alias hl='helm list --tiller-namespace '
+alias hs='helm search --tiller-namespace '
+alias hv='helm get values --tiller-namespace '
 
 # kitty
 alias kssh='kitty +kitten ssh'
@@ -72,6 +81,7 @@ alias path='echo $PATH | tr -s ":" "\n"' # Pretty print the path
 alias vlo='vault login -method=okta username=dwilliams@shipt.com'
 
 # vim
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 

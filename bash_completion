@@ -480,6 +480,7 @@ _complete_alias() {
 #complete -F _complete_alias myalias2
 #complete -F _complete_alias myalias3
 
+complete -F _complete_alias cdg
 complete -F _complete_alias g
 complete -F _complete_alias gco
 complete -F _complete_alias kl
