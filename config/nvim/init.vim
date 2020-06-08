@@ -173,6 +173,7 @@ endif
 
 " Auto Commands -------------------------------------------------- {{{
   autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy  " set groovy syntax for Jenkinsfiles
+  autocmd BufWritePre,FileWritePre * silent! call mkdir(expand('<afile>:p:h'), 'p')  " Create directory b4 writing file if it doesn't exist
   autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
   " ts - show existing tab with 4 spaces width
   " sw - when indenting with '>', use 4 spaces width
