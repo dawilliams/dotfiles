@@ -36,7 +36,7 @@ brew "jq"
 brew "kubectl"
 brew "kops"
 brew "kubectx"
-#brew "kubernetes-helm"
+brew "helm@2"
 brew "kubeseal"
 brew "kubetail"
 brew "libpq", link: true, conflicts_with: ["postgres"]   # psql client
