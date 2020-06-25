@@ -76,6 +76,10 @@ export PATH=$PATH:$HOME/go/bin
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
 export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx   # checkout `man ls` for the meaning
+
+#protobuf
+export PATH="/usr/local/opt/protobuf@3.6/bin:$PATH"
+
 export VAULT_ADDR='https://vault-east.shipttech.com'
 #export VAULT_ADDR='https://vault-east.staging.shipttech.com'
 
@@ -147,6 +151,7 @@ aoe () {
   fi
 }
 
+# Used by Prompt Command
 display_aws_okta_profile() {
   if [ -z ${AWS_OKTA_PROFILE+x} ]
   then
@@ -157,6 +162,37 @@ display_aws_okta_profile() {
   fi
 }
 
+fl () {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the name of the fly login target"
+    echo "Ex: fl production app"
+    return 1
+  fi
+
+  if [[ -z "$2" ]]
+  then
+    echo "You must provide the name of the fly login team-name"
+    echo "Ex: fl production app"
+    return 1
+  fi
+
+
+  if [[ "$1" == "production" ]] 
+  then
+    echo Running: fly --target $1 login --team-name $2 --concourse-url https://cd.shipttech.com
+    fly --target $1 login --team-name $2 --concourse-url https://cd.shipttech.com
+  elif [[ "$1" == "staging" ]]
+  then
+    echo Running: fly --target $1 login --team-name $2 --concourse-url https://cd.staing.shipttech.com
+    fly --target $1 login --team-name $2 --concourse-url https://cd.staging.shipttech.com
+  else
+    echo Running: fly --target $1 login --team-name $2 --concourse-url https://cd.development.shipttech.com
+    fly --target $1 login --team-name $2 --concourse-url https://cd.development.shipttech.com
+  fi
+}
+
+# Used by Prompt Command
 get_cluster_short() {
   echo "$1" | cut -d . -f1
 }
