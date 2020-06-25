@@ -17,10 +17,12 @@ if exists('*minpac#init')
   call minpac#add('junegunn/fzf.vim')
   call minpac#add('kassio/neoterm')
   call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+  call minpac#add('rhysd/vim-clang-format')
   call minpac#add('sebdah/vim-delve')
   call minpac#add('tpope/vim-dotenv')
   call minpac#add('tpope/vim-unimpaired')
   call minpac#add('tpope/vim-vinegar')
+  "call minpac#add('uarun/vim-protobuf')
 endif
 
 "  Behavior Modification ---------------------------------------  {{{
