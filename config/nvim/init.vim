@@ -22,6 +22,8 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-dotenv')
   call minpac#add('tpope/vim-unimpaired')
   call minpac#add('tpope/vim-vinegar')
+  call minpac#add('tyru/open-browser.vim')
+  call minpac#add('tyru/open-browser-github.vim')
   "call minpac#add('uarun/vim-protobuf')
 endif
 
@@ -184,6 +186,9 @@ endif
 
 " Commands ------------------------------------------------------- {{{
   command! PackClean packadd minpac | source $MYVIMRC | call minpac#clean()
+  command! -nargs=1 -complete=custom,Packlist
+        \ PackOpenUrl packadd minpac | source $MYVIMRC | call openbrowser#open(
+        \    minpac#getpluginfo(<q-args>).url)
   command! PackStatus packadd minpac | source $MYVIMRC |call minpac#status()
   command! PackUpdate packadd minpac | source $MYVIMRC |call minpac#update('', {'do': 'call minpac#status()'})
 "  }}}
