@@ -36,6 +36,7 @@ alias gph='git push -v origin'
 ## Set upstream with push
 alias gphu='git push -vu origin $(git branch | awk "/^\* / { print \$2 }")'
 alias gsh='git stash'
+alias gshp='git stash pop'
 alias gst='git status'
 
 # helm
