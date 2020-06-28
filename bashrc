@@ -300,3 +300,6 @@ shopt -s no_empty_cmd_completion
 
 # Case-insensitive filename matching in filename expansion.
 shopt -s nocaseglob
+
+# direnv
+eval "$(direnv hook bash)"

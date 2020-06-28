@@ -21,6 +21,7 @@ brew "chruby"
 brew "clang-format"
 mas "com.amazon.Kindle", id: 405399194
 brew "dep"
+brew "direnv"
 cask "docker"
 brew "docker-credential-helper-ecr"
 brew "drone-cli"
