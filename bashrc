@@ -301,5 +301,11 @@ shopt -s no_empty_cmd_completion
 # Case-insensitive filename matching in filename expansion.
 shopt -s nocaseglob
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 # direnv
 eval "$(direnv hook bash)"

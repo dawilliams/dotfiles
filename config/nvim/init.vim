@@ -10,7 +10,9 @@ if exists('*minpac#init')
   call minpac#add('Glench/Vim-Jinja2-Syntax')
   call minpac#add('NLKNguyen/papercolor-theme')
   call minpac#add('SirVer/ultisnips')
+  call minpac#add('Yggdroot/indentLine')
   call minpac#add('chr4/nginx.vim')
+  call minpac#add('chriskempson/base16-vim')
   call minpac#add('fatih/vim-go', {'do': 'GoUpdateBinaries'})
   call minpac#add('iamcco/markdown-preview.nvim', { 'do': '!cd app & yarn install'})
   call minpac#add('junegunn/fzf', {'do': '!./install --bin'})
@@ -27,7 +29,7 @@ if exists('*minpac#init')
   "call minpac#add('uarun/vim-protobuf')
 endif
 
-"  Behavior Modification ---------------------------------------  {{{
+" Behavior Modification ---------------------------------------  {{{
 "" Don't restate NeoVim defaults.
 "" See :help nvim-defaults for more info
     let mapleader=","       " set leader key
@@ -43,7 +45,7 @@ endif
     set visualbell          " flash screen instead of beep sound on errors
 
     if has('termguicolors')
-      set termguicolors     " enable true colors
+      let g:base16colorspace=256
     endif
 
     if has('persistent_undo')
@@ -171,8 +173,10 @@ endif
 " }}}
 
 " UI Customizations ---------------------------------------------- {{{
-  set background=dark
-  colorscheme PaperColor
+  if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+  endif
 " }}}
 
 " Auto Commands -------------------------------------------------- {{{
