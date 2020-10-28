@@ -2,7 +2,7 @@
 " See https://github.com/k-takata/minpac#load-minpac-on-demand for more
 " details.
 
-if exists('*minpac#init')
+if exists('g:loaded_minpac')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
@@ -14,14 +14,19 @@ if exists('*minpac#init')
   call minpac#add('chr4/nginx.vim')
   call minpac#add('chriskempson/base16-vim')
   call minpac#add('fatih/vim-go', {'do': 'GoUpdateBinaries'})
+  call minpac#add('hashivim/vim-terraform')
   call minpac#add('iamcco/markdown-preview.nvim', { 'do': '!cd app & yarn install'})
+  call minpac#add('jiangmiao/auto-pairs')
   call minpac#add('junegunn/fzf', {'do': '!./install --bin'})
   call minpac#add('junegunn/fzf.vim')
   call minpac#add('kassio/neoterm')
+  call minpac#add('mhinz/vim-signify')
   call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+  call minpac#add('pedrohdz/vim-yaml-folds')
   call minpac#add('rhysd/vim-clang-format')
   call minpac#add('sebdah/vim-delve')
   call minpac#add('tpope/vim-dotenv')
+  call minpac#add('tpope/vim-surround')
   call minpac#add('tpope/vim-unimpaired')
   call minpac#add('tpope/vim-vinegar')
   call minpac#add('tyru/open-browser.vim')
@@ -163,6 +168,16 @@ endif
       autocmd Filetype go nmap <leader>r :<C-u>GoRun<CR>
       autocmd Filetype go nmap <leader>t :<C-u>GoTest<CR>
     augroup END
+
+  " ====================================
+  " vim-terraform
+  " ====================================
+    " Allow vim-terraform to align settings automatically with Tabularize.
+    let g:terraform_align=1
+    " Allow vim-terraform to automatically fold (hide until unfolded) sections of terraform code. Defaults to 0 which is off.
+    let g:terraform_fold_sections=1
+    " Allow vim-terraform to automatically format *.tf and *.tfvars files with terraform fmt.
+    let g:terraform_fmt_on_save=1
 " }}}
 
 " Vim Script file settings --------------------------------------- {{{

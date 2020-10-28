@@ -1,27 +1,53 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "yaml",
+    "json",
+    "python"
+  ],
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ],
+      "ignoredRootPaths": [
+        "~"
+      ]
     },
     "dockerfile": {
       "command": "docker-langserver",
-      "filetypes": ["dockerfile"],
-      "args": ["--stdio"]
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
     },
     "terraform": {
       "command": "terraform-lsp",
-      "filetypes": ["terraform"],
+      "filetypes": [
+        "terraform"
+      ],
       "initializationOptions": {}
     }
   },
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
   "yaml.schemas": {
     "http://json.schema.org/drone.json": [
       ".drone.yml",
@@ -29,7 +55,7 @@
     ],
     "https://infraspec-json-schema.shipttech.com/spec": [
       "infraspec.yaml",
-            "infraspec.yml"
+      "infraspec.yml"
     ]
   },
   "yaml.trace.server": "verbose",

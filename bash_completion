@@ -482,8 +482,9 @@ _complete_alias() {
 
 complete -F _complete_alias cdg
 complete -F _complete_alias g
+complete -F _complete_alias gbr
 complete -F _complete_alias gco
-complete -F _complete_alias kl
+complete -F _complete_alias k
 complete -F _complete_alias ks
 complete -F _complete_alias kx
 complete -F _complete_alias p

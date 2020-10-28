@@ -80,8 +80,8 @@ export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx   # checkout `man ls` for the meaning
 #protobuf
 export PATH="/usr/local/opt/protobuf@3.6/bin:$PATH"
 
-export VAULT_ADDR='https://vault-east.shipttech.com'
-#export VAULT_ADDR='https://vault-east.staging.shipttech.com'
+#export VAULT_ADDR='https://vault-east.shipttech.com'
+export VAULT_ADDR='https://vault-east.staging.shipttech.com'
 
 ## Open nvr if in a nvim terminal
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
@@ -198,6 +198,75 @@ get_cluster_short() {
 }
 
 # howdoi (pip install howdoi) https://github.com/gleitz/howdoi
+
+gcm() {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the git comment message. The clubhouse card pulled from the current branch name will be appended to this."
+    echo "This function gets the clubhouse card from the 1st field of the current branch name where the delimiter is a '_'."
+    echo "The command it uses to get the clubhouse card is (git branch --show-current | cut -d '_' -f1)"
+    echo "Then runs 'git commit -m <message>' where message is user input and with the '[<clubhouse_card>]' string appended."
+    echo "ex: gcm 'Initial commit'"
+    return 1
+  fi
+  
+  clubhouse_card=$(git branch --show-current | cut -d '_' -f1)
+  if [[ $clubhouse_card == ch* ]]
+  then
+    message="${1} [${clubhouse_card}]"
+  else
+    message="${1} [ch${clubhouse_card}]"
+  fi
+
+  git commit -m "${message}"
+
+
+}
+
+gcma() {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the git comment message. The clubhouse card pulled from the current branch name will be appended to this."
+    echo "This function gets the clubhouse card from the 1st field of the current branch name where the delimiter is a '_'."
+    echo "The command it uses to get the clubhouse card is (git branch --show-current | cut -d '_' -f1)"
+    echo "Then runs 'git commit -am <message>' where message is user input and with the '[<clubhouse_card>]' string appended."
+    echo "ex: gcm 'Initial commit'"
+    return 1
+  fi
+  
+  clubhouse_card=$(git branch --show-current | cut -d '_' -f1)
+
+  if [[ $clubhouse_card == ch* ]]
+  then
+    message="${1} [${clubhouse_card}]"
+  else
+    message="${1} [ch${clubhouse_card}]"
+  fi
+
+  git commit -am "${message}"
+
+}
+
+gcob () {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the name of the branch to create. An Unix Epoch time stamp will be appended to this."
+    echo "This function generates a branch_name from user input and the output of the 'date +%w%H%M' command."
+    echo "Then runs 'git checkout branch -b <branch_name>'"
+    echo "ex: gcob ch13456"
+    return 1
+  fi
+
+  branch_name=${1}_$(date +%w%H%M)
+
+  if [[ $branch_name != ch* ]]
+  then
+    branch_name="ch${branch_name}"
+  fi
+
+  git checkout -b ${branch_name}
+}
+
 hdi() { 
   howdoi $* -c -n 5;
 }

@@ -21,20 +21,24 @@ alias dce='docker-compose'
 # git
 alias g='git'
 alias ga='git add'
+alias gbr='git branch'
 ## Prune or purge local merged branches except for current, master and development.
 alias gbrp='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "development" | xargs -n 1 git branch -d'
+alias gca="git commit --amend --no-edit"
 alias gco='git checkout'
-alias gcob='git checkout -b'
+#alias gcob='git checkout -b'
 alias gcod='git checkout development'
-alias gcom='git checkout master'
-alias gcm='git commit -m'
-alias gcma='git commit -am'
+alias gcom='git checkout main'
+#alias gcm='git commit -m'
+#alias gcma='git commit -am'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpl='git pull -r'
 alias gph='git push -v origin'
 ## Set upstream with push
 alias gphu='git push -vu origin $(git branch | awk "/^\* / { print \$2 }")'
+alias grba="git rebase -i --autosquash "
 alias gsh='git stash'
 alias gshp='git stash pop'
 alias gst='git status'
@@ -52,7 +56,11 @@ alias hv='helm get values --tiller-namespace '
 alias kssh='kitty +kitten ssh'
 
 # kubernetes
-alias kl='kubectl'
+alias k='kubectl'
+alias kd='kubectl describe'
+alias kg='kubectl get'
+alias kgp='kubectl get pods'
+alias kl='kubectl logs -f --timestamps'
 alias ks='kubens'
 alias ksc='kubens -c'
 alias kx='kubectx'

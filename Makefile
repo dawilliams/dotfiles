@@ -18,7 +18,9 @@ sync:
 	git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-iterm2
 
 	pip3 install --upgrade howdoi
-	pip3 install --upgrade neovim-remote 
+	pip3 install --upgrade jedi
+	pip3 install --upgrade neovim-remote
+	pip3 install --upgrade pynvim
 
 clean:
 	rm -f ~/.aliases
