@@ -1,4 +1,5 @@
 # aws-okta
+# b
 alias ao='aws-okta'
 alias aol='aws-okta login shipt-accounts'
 alias aopv='echo $AWS_OKTA_PROFILE'
@@ -25,14 +26,14 @@ alias gbr='git branch'
 ## Prune or purge local merged branches except for current, master and development.
 alias gbrp='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "development" | xargs -n 1 git branch -d'
 alias gc='git commit '
-alias gca="git commit --amend --no-edit"
+alias gcam='git commit --all --message'
+alias gcan="git commit --amend --no-edit"
 alias gco='git checkout'
-#alias gcob='git checkout -b'
+alias gcob='git checkout -b'
 alias gcod='git checkout development'
 alias gcom='git checkout main'
 alias gcf='git commit --fixup '
-#alias gcm='git commit -m'
-#alias gcma='git commit -am'
+alias gcm='git commit --message'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

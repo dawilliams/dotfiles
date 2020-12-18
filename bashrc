@@ -199,7 +199,7 @@ get_cluster_short() {
 
 # howdoi (pip install howdoi) https://github.com/gleitz/howdoi
 
-gcm() {
+gcmc() {
   if [[ -z "$1" ]]
   then
     echo "You must provide the git comment message. The clubhouse card pulled from the current branch name will be appended to this."
@@ -210,20 +210,11 @@ gcm() {
     return 1
   fi
   
-  clubhouse_card=$(git branch --show-current | cut -d '_' -f1)
-  if [[ $clubhouse_card == ch* ]]
-  then
-    message="${1} [${clubhouse_card}]"
-  else
-    message="${1} [ch${clubhouse_card}]"
-  fi
-
+  local message=$(gen_ch_commit_message "${1}")
   git commit -m "${message}"
-
-
 }
 
-gcma() {
+gcamc() {
   if [[ -z "$1" ]]
   then
     echo "You must provide the git comment message. The clubhouse card pulled from the current branch name will be appended to this."
@@ -234,6 +225,51 @@ gcma() {
     return 1
   fi
   
+  local message=$(gen_ch_commit_message "${1}")
+  git commit -am "${message}"
+}
+
+gcobc () {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the name of the branch to create."
+    echo "This function generates a branch_name from user input and prefixes 'ch' if not currently present."
+    echo "Then runs 'git checkout branch -b <branch_name>'"
+    echo "ex: gcob ch13456"
+    return 1
+  fi
+
+  local branch_name=$(gen_ch_branch_name ${1})
+  git checkout -b ${branch_name}
+}
+
+gcobcu () {
+  if [[ -z "$1" ]]
+  then
+    echo "You must provide the name of the branch to create."
+    echo "This function generates a branch_name from user input, prefixes 'ch' if not currently present and"
+    echo "appends the output of the 'date +%w%H%M' command."
+    echo "Then runs 'git checkout branch -b <branch_name>'"
+    echo "ex: gcob ch13456"
+    return 1
+  fi
+
+  local branch_name=$(gen_ch_branch_name ${1}_$(date +%w%H%M))
+  git checkout -b ${branch_name}
+}
+
+gen_ch_branch_name() {
+  branch_name=${1}
+
+  if [[ $branch_name != ch* ]]
+  then
+    branch_name="ch${branch_name}"
+  fi
+
+  echo "${branch_name}"
+}
+
+gen_ch_commit_message() {
   clubhouse_card=$(git branch --show-current | cut -d '_' -f1)
 
   if [[ $clubhouse_card == ch* ]]
@@ -243,31 +279,10 @@ gcma() {
     message="${1} [ch${clubhouse_card}]"
   fi
 
-  git commit -am "${message}"
-
+  echo "${message}"
 }
 
-gcob () {
-  if [[ -z "$1" ]]
-  then
-    echo "You must provide the name of the branch to create. An Unix Epoch time stamp will be appended to this."
-    echo "This function generates a branch_name from user input and the output of the 'date +%w%H%M' command."
-    echo "Then runs 'git checkout branch -b <branch_name>'"
-    echo "ex: gcob ch13456"
-    return 1
-  fi
-
-  branch_name=${1}_$(date +%w%H%M)
-
-  if [[ $branch_name != ch* ]]
-  then
-    branch_name="ch${branch_name}"
-  fi
-
-  git checkout -b ${branch_name}
-}
-
-hdi() { 
+hdi() {
   howdoi $* -c -n 5;
 }
 
