@@ -28,6 +28,7 @@ alias gbrp='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "dev
 alias gc='git commit '
 alias gcam='git commit --all --message'
 alias gcan="git commit --amend --no-edit"
+alias gcl="git clone "
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcod='git checkout development'
@@ -39,6 +40,7 @@ alias gdc='git diff --cached'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpl='git pull -r'
 alias gph='git push -v origin'
+alias gphf='git push -v origin -f'
 ## Set upstream with push
 alias gphu='git push -vu origin $(git branch | awk "/^\* / { print \$2 }")'
 alias grba="git rebase --interactive --autosquash "

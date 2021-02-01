@@ -1,7 +1,7 @@
 sync:
 	mkdir -p ~/.aws
 	mkdir -p ~/.config/nvim
-	mkdir -p ~/.config/kitty
+#	mkdir -p ~/.config/kitty
 	mkdir -p ~/.kube
 
 	[ -f ~/.aliases ] || ln -s $(PWD)/aliases ~/.aliases
