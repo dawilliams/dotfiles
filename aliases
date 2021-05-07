@@ -56,7 +56,9 @@ alias hh='helm history --tiller-namespace '
 alias hi='helm inspect --tiller-namespace '
 alias hl='helm list --tiller-namespace '
 alias hs='helm search --tiller-namespace '
-alias hv='helm get values --tiller-namespace '
+alias hgc='helm get chart --tiller-namespace '
+alias hgr='helm get readme --tiller-namespace '
+alias hgv='helm get values --tiller-namespace '
 
 # kitty
 alias kssh='kitty +kitten ssh'

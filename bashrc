@@ -70,16 +70,20 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 # go
 export GOPATH=$HOME/go
 export GOPRIVATE="github.com/shipt/*"
-export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 # helm
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
 export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx   # checkout `man ls` for the meaning
 
-#protobuf
+# protobuf
 export PATH="/usr/local/opt/protobuf@3.6/bin:$PATH"
 
+# sourcegraph
+export SRC_ENDPOINT="https://sourcegraph.shipttech.com"
+
+# vault
 #export VAULT_ADDR='https://vault-east.shipttech.com'
 export VAULT_ADDR='https://vault-east.staging.shipttech.com'
 
