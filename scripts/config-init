@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Variables
+GITHUB_REPO="dawilliams/mycfg"
+LOCAL_REPO=".mycfg"
+
+# Use https because ssh may not be set up yet.
+git clone --bare https://github.com/$GITHUB_REPO.git "$HOME"/$LOCAL_REPO
+
+# define config alias locally since the dotfiles
+# aren't installed on the system yet
+function config {
+   git --git-dir="$HOME"/$LOCAL_REPO/ --work-tree="$HOME" "$@"
+}
+
+# create a directory to backup existing dotfiles to
+mkdir -p $LOCAL_REPO-backup
+config checkout
+
+if [ $? = 0 ]; then
+  echo "Checked out mycfg from https://github.com/$GITHUB_REPO.git";
+  else
+    echo "Moving existing $LOCAL_REPO to ~/$LOCAL_REPO-backup";
+    config checkout 2>&1 | grep -e "\s+\." | awk {'print $1'} | xargs -I{} mv {} $LOCAL_REPO-backup/{}
+fi
+
+# checkout mycfg from repo
+config checkout
+#config config status.showUntrackedFiles no
