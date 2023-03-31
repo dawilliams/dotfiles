@@ -7,7 +7,7 @@
 cask_args appdir: "/Applications/"
 
 # Installed by Me
-
+brew "asdf"
 
 # Installed by Employer
 # cask "firefox"
