@@ -8,8 +8,11 @@ To install and use this repository as your MacOS configuration, run
 * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` to install Homebrew
 * `curl https://raw.githubusercontent.com/dawilliams/mycfg/main/scripts/config-init | bash` to download and run the [config-init](scripts/config-init) file stored in this repository.
 * `brew bundle` to install applications and utilities managed by Homebrew
+* Add `/opt/homebrew/bin/zsh` to /etc/shells via sudo
+* `chsh -s /opt/homebrew/bin/zsh` to make Homebrew zsh the default shell.
 
 ## What's installed
 * [Xcode Command Line Tools](https://www.makeuseof.com/install-xcode-command-line-tools/) via `xcode-select --install`
 * [Homebrew](https://docs.brew.sh/Installation#macos-requirements) via `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+* [zsh](https://www.zsh.org/) via `HomeBrew Brewfile`
 * [asdf](https://asdf-vm) via `HomeBrew Brewfile`

@@ -7,6 +7,7 @@
 cask_args appdir: "/Applications/"
 
 # Installed by Me
+brew "zsh"
 brew "asdf"
 
 # Installed by Employer
