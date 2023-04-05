@@ -9,6 +9,7 @@ cask_args appdir: "/Applications/"
 # Installed by Me
 brew "zsh"
 brew "asdf"
+cask "1password"
 
 # Installed by Employer
 # cask "firefox"

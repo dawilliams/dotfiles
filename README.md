@@ -16,3 +16,8 @@ To install and use this repository as your MacOS configuration, run
 * [Homebrew](https://docs.brew.sh/Installation#macos-requirements) via `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 * [zsh](https://www.zsh.org/) via `HomeBrew Brewfile`
 * [asdf](https://asdf-vm) via `HomeBrew Brewfile`
+* [1password](https://1password.com) via `HomeBrew Brewfile`
+
+## Chrome Extensions
+* [Okta](https://chrome.google.com/webstore/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb?hl=en-US)
+* [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
