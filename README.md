@@ -17,8 +17,13 @@ To install and use this repository as your MacOS configuration, run
 * [zsh](https://www.zsh.org/) via `HomeBrew Brewfile`
 * [asdf](https://asdf-vm) via `HomeBrew Brewfile`
 * [1password](https://1password.com) via `HomeBrew Brewfile`
-* [1password-cli](https://1password.com/downloads/command-line) via `asdf`
+* [1password-cli](https://1password.com/downloads/command-line) via `HomeBrew Brewfile`
+
 
 ## Chrome Extensions
 * [Okta](https://chrome.google.com/webstore/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb?hl=en-US)
 * [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
+
+## Manual Setup
+### 1password CLI/App Integration
+* Follow the directions for [1Password app antegration](https://developer.1password.com/docs/cli/app-integration)

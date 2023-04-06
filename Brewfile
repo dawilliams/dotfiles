@@ -10,6 +10,7 @@ cask_args appdir: "/Applications/"
 brew "zsh"
 brew "asdf"
 cask "1password"
+cask "1password/tap/1password-cli"
 
 # Installed by Employer
 # cask "firefox"
