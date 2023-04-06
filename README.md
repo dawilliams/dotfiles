@@ -18,6 +18,7 @@ To install and use this repository as your MacOS configuration, run
 * [asdf](https://asdf-vm) via `HomeBrew Brewfile`
 * [1password](https://1password.com) via `HomeBrew Brewfile`
 * [1password-cli](https://1password.com/downloads/command-line) via `HomeBrew Brewfile`
+* [git](https://git-scm.com/) via `HomeBrew Brewfile`
 
 
 ## Chrome Extensions
@@ -27,3 +28,6 @@ To install and use this repository as your MacOS configuration, run
 ## Manual Setup
 ### 1password CLI/App Integration
 * Follow the directions for [1Password app antegration](https://developer.1password.com/docs/cli/app-integration)
+
+## Homebrew or asdf
+Use Homebrew unless multiple versions or a specific version is needed.
