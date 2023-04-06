@@ -12,6 +12,7 @@ brew "asdf"
 cask "1password"
 cask "1password/tap/1password-cli"
 brew "git"
+brew "gh"
 
 # Installed by Employer
 # cask "firefox"

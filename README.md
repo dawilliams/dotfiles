@@ -19,6 +19,7 @@ To install and use this repository as your MacOS configuration, run
 * [1password](https://1password.com) via `HomeBrew Brewfile`
 * [1password-cli](https://1password.com/downloads/command-line) via `HomeBrew Brewfile`
 * [git](https://git-scm.com/) via `HomeBrew Brewfile`
+* [github cli](https://cli.github.com) via `HomeBrew Brewfile`
 
 
 ## Chrome Extensions
