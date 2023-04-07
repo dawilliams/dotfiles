@@ -1,4 +1,4 @@
-# mycfg
+# dotfiles
 ## Git Bare Repository
 This repository is intended to be pulled as a bare repositiry as described by [this article.](https://mjones44.medium.com/storing-dotfiles-in-a-git-repository-53f765c0005d)
 
@@ -6,7 +6,7 @@ This repository is intended to be pulled as a bare repositiry as described by [t
 To install and use this repository as your MacOS configuration, run 
 * `xcode-select --install` to install Xcode command line tools
 * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` to install Homebrew
-* `curl https://raw.githubusercontent.com/dawilliams/mycfg/main/scripts/config-init | bash` to download and run the [config-init](scripts/config-init) file stored in this repository.
+* `curl https://raw.githubusercontent.com/dawilliams/dotfiles/main/scripts/config-init | bash` to download and run the [config-init](scripts/config-init) file stored in this repository.
 * `brew bundle` to install applications and utilities managed by Homebrew
 * Add `/opt/homebrew/bin/zsh` to /etc/shells via sudo
 * `chsh -s /opt/homebrew/bin/zsh` to make Homebrew zsh the default shell.
