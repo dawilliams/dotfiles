@@ -19,11 +19,8 @@ dot checkout
 
 if [ $? = 0 ]; then
   echo "Checked out $LOCAL_REPO from https://github.com/$GITHUB_REPO.git";
+  #dot config status.showUntrackedFiles no
   else
-    echo "Moving existing $LOCAL_REPO to ~/$LOCAL_REPO-backup";
-    dot checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} $LOCAL_REPO-backup/{}
+    mkdir -p $LOCAL_REPO-backup
+    echo "Github bare repository checkout failed. Move any existing dotfiles to ~/$LOCAL_REPO-backup";
 fi
-
-# checkout dotfiles from repo
-dot checkout
-#dot config status.showUntrackedFiles no
