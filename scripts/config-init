@@ -21,7 +21,7 @@ if [ $? = 0 ]; then
   echo "Checked out $LOCAL_REPO from https://github.com/$GITHUB_REPO.git";
   else
     echo "Moving existing $LOCAL_REPO to ~/$LOCAL_REPO-backup";
-    dot checkout 2>&1 | grep -e "\s+\." | awk {'print $1'} | xargs -I{} mv {} $LOCAL_REPO-backup/{}
+    dot checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} $LOCAL_REPO-backup/{}
 fi
 
 # checkout dotfiles from repo
