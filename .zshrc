@@ -1,6 +1,6 @@
 # aliases 
-## bare git repository at ~/.mycfg 
-alias config="git --git-dir=$HOME/.mycfg --work-tree=$HOME"
+## bare git repository at ~/.dotfiles 
+alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # sources
 ## asdf
