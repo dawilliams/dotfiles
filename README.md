@@ -25,6 +25,7 @@ To install and use this repository as your MacOS configuration, run
 ## Chrome Extensions
 * [Okta](https://chrome.google.com/webstore/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb?hl=en-US)
 * [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
+* [Clockwise](https://chrome.google.com/webstore/detail/clockwise-team-time-calen/hjcneejoopafkkibfbcaeoldpjjiamog?utm_source=google&utm_medium=cpc&utm_campaign=brand_clockwise)
 
 ## Manual Setup
 * [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration)
