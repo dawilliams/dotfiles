@@ -2,6 +2,8 @@
 ## bare git repository at ~/.dotfiles 
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+# environment variables
+
 # sources
 ## asdf
 source /opt/homebrew/opt/asdf/libexec/asdf.sh
