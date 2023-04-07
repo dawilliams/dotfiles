@@ -27,10 +27,9 @@ To install and use this repository as your MacOS configuration, run
 * [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
 
 ## Manual Setup
-### 1password CLI/App Integration
-* Follow the directions for [1Password app antegration](https://developer.1password.com/docs/cli/app-integration)
-### 1password Github Shell Plugins
-https://developer.1password.com/docs/cli/shell-plugins/github
+* [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration)
+* [1Password for SSH & Git](https://developer.1password.com/docs/ssh)
+* [1Password Github Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/github)
 
 ## Homebrew or asdf
 Use Homebrew unless multiple versions or a specific version is needed.
