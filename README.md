@@ -7,9 +7,14 @@ To install and use this repository as your MacOS configuration, run
 * `xcode-select --install` to install Xcode command line tools
 * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` to install Homebrew
 * `curl https://raw.githubusercontent.com/dawilliams/dotfiles/main/scripts/config-init | bash` to download and run the [config-init](scripts/config-init) file stored in this repository.
+* `. ~/.zshrc` to get new config
 * `brew bundle` to install applications and utilities managed by Homebrew
 * Add `/opt/homebrew/bin/zsh` to /etc/shells via sudo
 * `chsh -s /opt/homebrew/bin/zsh` to make Homebrew zsh the default shell.
+* Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
+* Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
+* Set `url` under `[remote "origin"]` to `ssh://git@github.com/dawilliams/dotfiles.get` in the `~/.dotfiles/config` file
+* Follow the [1Password Github Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/github) instructions
 
 ## What's installed
 * [Xcode Command Line Tools](https://www.makeuseof.com/install-xcode-command-line-tools/) via `xcode-select --install`
@@ -26,11 +31,6 @@ To install and use this repository as your MacOS configuration, run
 * [Okta](https://chrome.google.com/webstore/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb?hl=en-US)
 * [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
 * [Clockwise](https://chrome.google.com/webstore/detail/clockwise-team-time-calen/hjcneejoopafkkibfbcaeoldpjjiamog?utm_source=google&utm_medium=cpc&utm_campaign=brand_clockwise)
-
-## Manual Setup
-* [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration)
-* [1Password for SSH & Git](https://developer.1password.com/docs/ssh)
-* [1Password Github Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/github)
 
 ## Homebrew or asdf
 Use Homebrew unless multiple versions or a specific version is needed.
