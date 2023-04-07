@@ -29,6 +29,8 @@ To install and use this repository as your MacOS configuration, run
 ## Manual Setup
 ### 1password CLI/App Integration
 * Follow the directions for [1Password app antegration](https://developer.1password.com/docs/cli/app-integration)
+### 1password Github Shell Plugins
+https://developer.1password.com/docs/cli/shell-plugins/github
 
 ## Homebrew or asdf
 Use Homebrew unless multiple versions or a specific version is needed.
