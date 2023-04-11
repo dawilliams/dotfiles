@@ -13,6 +13,7 @@ cask "1password"
 cask "1password/tap/1password-cli"
 brew "git"
 brew "gh"
+brew "sourcegraph/src-cli/src-cli"
 
 # Installed by Employer
 # cask "firefox"

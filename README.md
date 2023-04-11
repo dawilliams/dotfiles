@@ -14,6 +14,7 @@ To install and use this repository as your MacOS configuration, run
 * Set `url` under `[remote "origin"]` to `ssh://git@github.com/dawilliams/dotfiles.get` in the `/opt/homebrew/.git/config` file
 * Follow the [1Password Github Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/github) instructions
 * Follow the [1Password Homebrew Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/homebrew) instructions
+* Follow the [1Password Sourcegraph Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/sourcegraph) instructions
 
 ## What's installed
 * [Xcode Command Line Tools](https://www.makeuseof.com/install-xcode-command-line-tools/) via `xcode-select --install`
