@@ -1,0 +1,28 @@
+#!/bin/bash
+#/ Usage: script/strap-after-setup
+#/ Machine configurations required by software installed in bin/strap.sh
+set -e
+
+sudo_askpass() {
+  if [ -n "$SUDO_ASKPASS" ]; then
+    sudo --askpass "$@"
+  else
+    sudo "$@"
+  fi
+}
+
+# We want to always prompt for sudo password at least once rather than doing
+# root stuff unexpectedly.
+sudo --reset-timestamp
+
+# Add Homebrew zsh to list of shells
+HOMEBREW_BIN=$(brew --prefix)/bin
+
+if  ! grep -q "$HOMEBREW_BIN/zsh" '/etc/shells'; then
+  sudo_askpass sed -i '' '$a\'$'\n'"$HOMEBREW_BIN/zsh" /etc/shells
+fi
+
+# Change default shell to Homebrew zsh
+if [ "$SHELL" != "$HOMEBREW_BIN/zsh" ]; then
+  chsh -s $HOMEBREW_BIN/zsh 
+fi

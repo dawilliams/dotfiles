@@ -4,13 +4,10 @@ This repository is intended to be pulled as a bare repositiry as described by [t
 
 ### Installing This Config on a New System
 To install and use this repository as your MacOS configuration, run 
-* `xcode-select --install` to install Xcode command line tools
-* `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` to install Homebrew
-* `curl https://raw.githubusercontent.com/dawilliams/dotfiles/main/scripts/config-init | bash` to download and run the [config-init](scripts/config-init) file stored in this repository.
-* `. ~/.zshrc` to get new config
-* `brew bundle` to install applications and utilities managed by Homebrew
-* Add `/opt/homebrew/bin/zsh` to /etc/shells via sudo
-* `chsh -s /opt/homebrew/bin/zsh` to make Homebrew zsh the default shell.
+* `curl https://raw.githubusercontent.com/dawilliams/dotfiles/main/bin/strap.sh --silent --output /tmp/strap.sh`
+* Review script variables at `# Update these before running script`
+* Run the `/tmp/strap.sh` script
+* Restart terminal application to get new config
 * Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 * Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
 * Set `url` under `[remote "origin"]` to `ssh://git@github.com/dawilliams/dotfiles.get` in the `~/.dotfiles/config` file
@@ -20,7 +17,6 @@ To install and use this repository as your MacOS configuration, run
 * [Xcode Command Line Tools](https://www.makeuseof.com/install-xcode-command-line-tools/) via `xcode-select --install`
 * [Homebrew](https://docs.brew.sh/Installation#macos-requirements) via `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 * [zsh](https://www.zsh.org/) via `HomeBrew Brewfile`
-* [asdf](https://asdf-vm) via `HomeBrew Brewfile`
 * [1password](https://1password.com) via `HomeBrew Brewfile`
 * [1password-cli](https://1password.com/downloads/command-line) via `HomeBrew Brewfile`
 * [git](https://git-scm.com/) via `HomeBrew Brewfile`
