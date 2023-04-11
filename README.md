@@ -24,6 +24,8 @@ To install and use this repository as your MacOS configuration, run
 * [1password-cli](https://1password.com/downloads/command-line) via `HomeBrew Brewfile`
 * [git](https://git-scm.com/) via `HomeBrew Brewfile`
 * [github cli](https://cli.github.com) via `HomeBrew Brewfile`
+* [jq](https://stedolan.github.io/jq)
+* [sourcegraph cli](https://docs.sourcegraph.com/cli)
 
 
 ## Chrome Extensions
