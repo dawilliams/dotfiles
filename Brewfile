@@ -8,7 +8,7 @@ cask_args appdir: "/Applications/"
 
 # Installed by Me
 brew "zsh"
-brew "asdf"
+# brew "asdf"
 cask "1password"
 cask "1password/tap/1password-cli"
 brew "git"
