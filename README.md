@@ -28,10 +28,15 @@ To install and use this repository as your MacOS configuration, run
 * [sourcegraph cli](https://docs.sourcegraph.com/cli)
 
 
+## What's configured
+* Homebrew zsh is made the default shell
+* Terminal application is configured
+
 ## Chrome Extensions
 * [Okta](https://chrome.google.com/webstore/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb?hl=en-US)
 * [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
 * [Clockwise](https://chrome.google.com/webstore/detail/clockwise-team-time-calen/hjcneejoopafkkibfbcaeoldpjjiamog?utm_source=google&utm_medium=cpc&utm_campaign=brand_clockwise)
+* [AWS Extend Switch Roles](https://chrome.google.com/webstore/detail/aws-extend-switch-roles/jpmkfafbacpgapdghgdpembnojdlgkdl/related?hl=en)
 
 ## Homebrew or asdf
 Use Homebrew unless multiple versions or a specific version is needed.

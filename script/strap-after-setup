@@ -3,6 +3,13 @@
 #/ Machine configurations required by software installed in bin/strap.sh
 set -e
 
+# We want to always prompt for sudo password at least once rather than doing
+# root stuff unexpectedly.
+sudo --reset-timestamp
+
+#######################################################################
+# Functions
+#######################################################################
 sudo_askpass() {
   if [ -n "$SUDO_ASKPASS" ]; then
     sudo --askpass "$@"
@@ -11,18 +18,104 @@ sudo_askpass() {
   fi
 }
 
-# We want to always prompt for sudo password at least once rather than doing
-# root stuff unexpectedly.
-sudo --reset-timestamp
+# functions for turning off debug for use when handling the user password
+clear_debug() {
+  set +x
+}
 
+reset_debug() {
+  if [ -n "$STRAP_DEBUG" ]; then
+    set -x
+  fi
+}
+
+# Initialise (or reinitialise) sudo to save unhelpful prompts later.
+sudo_init() {
+  if [ -z "$STRAP_INTERACTIVE" ]; then
+    return
+  fi
+
+  # If TouchID for sudo is setup: use that instead.
+  if grep -q pam_tid /etc/pam.d/sudo; then
+    return
+  fi
+
+  local SUDO_PASSWORD SUDO_PASSWORD_SCRIPT
+
+  if ! sudo --validate --non-interactive &>/dev/null; then
+    while true; do
+      read -rsp "--> Enter your password (for sudo access):" SUDO_PASSWORD
+      echo
+      if sudo --validate --stdin 2>/dev/null <<<"$SUDO_PASSWORD"; then
+        break
+      fi
+
+      unset SUDO_PASSWORD
+      echo "!!! Wrong password!" >&2
+    done
+
+    clear_debug
+    SUDO_PASSWORD_SCRIPT="$(
+      cat <<BASH
+#!/bin/bash
+echo "$SUDO_PASSWORD"
+BASH
+    )"
+    unset SUDO_PASSWORD
+    SUDO_ASKPASS_DIR="$(mktemp -d)"
+    SUDO_ASKPASS="$(mktemp "$SUDO_ASKPASS_DIR"/strap-askpass-XXXXXXXX)"
+    chmod 700 "$SUDO_ASKPASS_DIR" "$SUDO_ASKPASS"
+    bash -c "cat > '$SUDO_ASKPASS'" <<<"$SUDO_PASSWORD_SCRIPT"
+    unset SUDO_PASSWORD_SCRIPT
+    reset_debug
+
+    export SUDO_ASKPASS
+  fi
+}
+
+sudo_refresh() {
+  clear_debug
+  if [ -n "$SUDO_ASKPASS" ]; then
+    sudo --askpass --validate
+  else
+    sudo_init
+  fi
+  reset_debug
+}
+
+logn() {
+  STRAP_STEP="$*"
+  sudo_refresh
+  printf -- "--> %s " "$*"
+}
+
+logk() {
+  STRAP_STEP=""
+  echo "OK"
+}
+
+#######################################################################
+# Script 
+#######################################################################
 # Add Homebrew zsh to list of shells
+logn "Making Homebrew zsh the default shell:"
 HOMEBREW_BIN=$(brew --prefix)/bin
 
 if  ! grep -q "$HOMEBREW_BIN/zsh" '/etc/shells'; then
   sudo_askpass sed -i '' '$a\'$'\n'"$HOMEBREW_BIN/zsh" /etc/shells
 fi
 
-# Change default shell to Homebrew zsh
+## Change default shell to Homebrew zsh
 if [ "$SHELL" != "$HOMEBREW_BIN/zsh" ]; then
   chsh -s $HOMEBREW_BIN/zsh 
 fi
+logk
+
+# Configure Terminal application
+logn "Configuring Terminal application:"
+sudo_askpass defaults write com.apple.Terminal "Default Window Settings" -string Pro
+sudo_askpass defaults write com.apple.Terminal "Startup Window Settings" -string Pro
+sudo_askpass defaults write com.apple.Terminal "NSWindow Frame NSColorPanel" -string "0 161 255 217 0 0 1728 1079" 
+sudo_askpass defaults write com.apple.Terminal "NSWindow Frame TTWindow Pro" -string "1728 289 1450 984 1728 -141 2560 1415" 
+sudo_askpass defaults write com.apple.Terminal "NSWindow Frame NSFontPanel" -string "1213 120 445 95 0 0 1728 1079"
+logk
