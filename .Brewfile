@@ -16,6 +16,7 @@ brew "git"
 brew "gh"
 brew "jq"
 brew "asdf"
+brew "xz"
 
 # Installed by Employer
 # cask "firefox"
