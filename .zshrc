@@ -8,7 +8,8 @@ export SRC_ENDPOINT=https://shipt.sourcegraph.com
 
 # sources
 ## asdf
-###source /opt/homebrew/opt/asdf/libexec/asdf.sh
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 ## 1password shell plugins
 source /Users/dwilliams/.config/op/plugins.sh

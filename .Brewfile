@@ -8,14 +8,14 @@ tap "sourcegraph/src-cli"
 cask_args appdir: "/Applications/"
 
 # Installed by Me
-brew "zsh"
-# brew "asdf"
 cask "1password"
 cask "1password/tap/1password-cli"
+brew "sourcegraph/src-cli/src-cli"
+brew "zsh"
 brew "git"
 brew "gh"
 brew "jq"
-brew "sourcegraph/src-cli/src-cli"
+brew "asdf"
 
 # Installed by Employer
 # cask "firefox"
