@@ -24,8 +24,13 @@ To install and use this repository as your MacOS configuration, run
 * [1password-cli](https://1password.com/downloads/command-line) via `HomeBrew Brewfile`
 * [git](https://git-scm.com/) via `HomeBrew Brewfile`
 * [github cli](https://cli.github.com) via `HomeBrew Brewfile`
-* [jq](https://stedolan.github.io/jq)
-* [sourcegraph cli](https://docs.sourcegraph.com/cli)
+* [jq](https://stedolan.github.io/jq) via `HomeBrew Brewfile`
+* [sourcegraph cli](https://docs.sourcegraph.com/cli) via `HomeBrew Brewfile`
+* [asdf](https://asdf-vm.com/) via `HomeBrew Brewfile`
+* [xz](https://tukaani.org/xz/) via `HomeBrew Brewfile`. Needed for python 3.10
+* [direnv](https://direnv.net) via `asdf`
+* [python](https://www.python.org/downloads/release/python-3100) via `asdf`
+* [poetry](https://python-poetry.org) via `asdf`
 
 
 ## What's configured
