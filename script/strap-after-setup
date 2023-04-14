@@ -119,3 +119,8 @@ sudo_askpass defaults write com.apple.Terminal "NSWindow Frame NSColorPanel" -st
 sudo_askpass defaults write com.apple.Terminal "NSWindow Frame TTWindow Pro" -string "1728 289 1450 984 1728 -141 2560 1415" 
 sudo_askpass defaults write com.apple.Terminal "NSWindow Frame NSFontPanel" -string "1213 120 445 95 0 0 1728 1079"
 logk
+
+# Configure Finder application
+logn "Configuring Finder application:"
+sudo_askpass defaults write com.apple.Finder AppleShowAllFiles true
+logk
