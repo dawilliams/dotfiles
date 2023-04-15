@@ -42,6 +42,7 @@ To install and use this repository as your MacOS configuration, run
 * [1password](https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en-US)
 * [Clockwise](https://chrome.google.com/webstore/detail/clockwise-team-time-calen/hjcneejoopafkkibfbcaeoldpjjiamog?utm_source=google&utm_medium=cpc&utm_campaign=brand_clockwise)
 * [AWS Extend Switch Roles](https://chrome.google.com/webstore/detail/aws-extend-switch-roles/jpmkfafbacpgapdghgdpembnojdlgkdl/related?hl=en)
+* [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en)
 
 ## Homebrew or asdf
 Use Homebrew unless multiple versions or a specific version is needed.
