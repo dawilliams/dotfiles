@@ -1,12 +1,8 @@
 # aliases 
-## bare git repository at ~/.dotfiles 
+## ~/.dotfiles bare git repository
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 ## saml2aws
 alias sal="saml2aws login"
-
-# environment variables
-## SourceGraph
-export SRC_ENDPOINT=https://shipt.sourcegraph.com
 
 # sources
 ## asdf
