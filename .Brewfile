@@ -17,6 +17,7 @@ brew "gh"
 brew "jq"
 brew "asdf"
 brew "xz"
+brew "saml2aws"
 
 # Installed by Employer
 # cask "firefox"

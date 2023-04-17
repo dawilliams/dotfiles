@@ -1,6 +1,8 @@
 # aliases 
 ## bare git repository at ~/.dotfiles 
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+## saml2aws
+alias sal="saml2aws login"
 
 # environment variables
 ## SourceGraph
