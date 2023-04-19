@@ -15,6 +15,7 @@ To install and use this repository as your MacOS configuration, run
 * Follow the [1Password Github Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/github) instructions
 * Follow the [1Password Homebrew Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/homebrew) instructions
 * Follow the [1Password Sourcegraph Shell Plugin](https://developer.1password.com/docs/cli/shell-plugins/sourcegraph) instructions
+* Add SQLPro for Postgres license from 1Password
 
 ## What's installed
 * [Xcode Command Line Tools](https://www.makeuseof.com/install-xcode-command-line-tools/) via `xcode-select --install`
@@ -31,6 +32,7 @@ To install and use this repository as your MacOS configuration, run
 * [direnv](https://direnv.net) via `asdf`
 * [python](https://www.python.org/downloads/release/python-3100) via `asdf`
 * [poetry](https://python-poetry.org) via `asdf`
+* [SQLPro for Postgres](https://macpostgresclient.com) via `HomeBrew Brewfile`
 
 
 ## What's configured

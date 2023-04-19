@@ -10,6 +10,7 @@ cask_args appdir: "/Applications/"
 # Installed by Me
 cask "1password"
 cask "1password/tap/1password-cli"
+cask "sqlpro-for-postgres"
 brew "sourcegraph/src-cli/src-cli"
 brew "zsh"
 brew "git"
