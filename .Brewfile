@@ -12,17 +12,23 @@ cask_args appdir: "/Applications/"
 
 # Installed by Me
 brew "mas"
-cask "1password"
-cask "1password/tap/1password-cli"
-cask "sqlpro-for-postgres"
-brew "sourcegraph/src-cli/src-cli"
+# coreutils required for asdf-golang
+brew "coreutils"
+# xz required for asdf-python
+brew "xz"
 brew "zsh"
 brew "git"
 brew "gh"
+brew "curl"
 brew "jq"
+brew "sourcegraph/src-cli/src-cli"
 brew "asdf"
-brew "xz"
 brew "saml2aws"
+brew "neovim"
+brew "ripgrep"
+cask "1password"
+cask "1password/tap/1password-cli"
+cask "sqlpro-for-postgres"
 
 # Installed by Employer
 # cask "firefox"
