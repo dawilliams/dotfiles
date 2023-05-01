@@ -1,8 +1,10 @@
 # Homebrew Bundle file: https://github.com/Homebrew/homebrew-bundle
 # Reference: https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f#best-practices-brew-cask-mas-and-cu
+# Reference: https://www.programmingfonts.org/
 
 # Homebrew Taps
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "buo/cask-upgrade"
 tap "1password/tap"
 tap "sourcegraph/src-cli"
@@ -26,6 +28,8 @@ brew "asdf"
 brew "saml2aws"
 brew "neovim"
 brew "ripgrep"
+cask "kitty"
+cask "font-jetbrains-mono"
 cask "1password"
 cask "1password/tap/1password-cli"
 cask "sqlpro-for-postgres"
