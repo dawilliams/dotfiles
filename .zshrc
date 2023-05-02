@@ -1,6 +1,9 @@
 # aliases 
 ## ~/.dotfiles bare git repository
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+## drone cli
+alias drone="op run -- drone"
+
 ## neovim
 alias vi="nvim"
 alias vim="nvim"
