@@ -1,6 +1,9 @@
 # aliases 
 ## ~/.dotfiles bare git repository
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+## neovim
+alias vi="nvim"
+alias vim="nvim"
 ## saml2aws
 alias sal="saml2aws login"
 
