@@ -8,6 +8,7 @@ To install and use this repository as your MacOS configuration, run
 * Review script variables at `# Update these before running script`
 * Run the `/tmp/strap.sh` script
 * Restart terminal application to get new config
+* Run [zap installer script](https://www.zapzsh.org)
 * Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 * Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
 * Set `url` under `[remote "origin"]` to `ssh://git@github.com/dawilliams/dotfiles.get` in the `~/.dotfiles/config` file
@@ -33,6 +34,9 @@ To install and use this repository as your MacOS configuration, run
 * [python](https://www.python.org/downloads/release/python-3100) via `asdf`
 * [poetry](https://python-poetry.org) via `asdf`
 * [SQLPro for Postgres](https://macpostgresclient.com) via `HomeBrew Brewfile`
+* [Neovim](https://neovim.io/)
+* [kitty](https://sw.kovidgoyal.net/kitty/)
+* [zap](https://www.zapzsh.org/)
 
 
 ## What's configured
