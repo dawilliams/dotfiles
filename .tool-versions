@@ -1,3 +1,4 @@
 python 3.10.11
 poetry 1.4.2
 golang 1.19.8
+terraform 0.14.11

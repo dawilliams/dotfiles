@@ -37,6 +37,7 @@ To install and use this repository as your MacOS configuration, run
 * [Neovim](https://neovim.io/)
 * [kitty](https://sw.kovidgoyal.net/kitty/)
 * [zap](https://www.zapzsh.org/)
+* [terraform](https://www.terraform.io) via `asdf`. Note use `ASDF_HASHICORP_OVERWRITE_ARCH_TERRAFORM=amd64 asdf install terraform ` to install versions that don't have `arm64` files
 
 
 ## What's configured
