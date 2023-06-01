@@ -9,6 +9,10 @@ alias vi="nvim"
 alias vim="nvim"
 ## saml2aws
 alias sal="saml2aws login"
+alias saedev="saml2aws exec --exec-profile dev ${SHELL}"
+alias saeplt="saml2aws exec --exec-profile plt ${SHELL}"
+alias saeprd="saml2aws exec --exec-profile prd ${SHELL}"
+alias saestg="saml2aws exec --exec-profile stg ${SHELL}"
 
 # sources
 ## asdf
