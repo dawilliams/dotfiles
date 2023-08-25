@@ -29,11 +29,15 @@ brew "asdf"
 brew "saml2aws"
 brew "neovim"
 brew "ripgrep"
+brew "aws-iam-authenticator"
 cask "kitty"
 cask "font-jetbrains-mono"
 cask "1password"
 cask "1password/tap/1password-cli"
+cask "insomnia"
 cask "sqlpro-for-postgres"
+# Had to install manually
+# cask "akiflow"
 
 # Installed by Employer
 # cask "firefox"
