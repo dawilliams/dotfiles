@@ -1,10 +1,19 @@
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+    -- :help lsp-zero-keybindings
+    -- :help lsp-zero-completion-keybindings
+    lsp.default_keymaps({ buffer = bufnr })
+    -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/lsp.md#enable-format-on-save
+    lsp.buffer_autoformat()
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lsp.extend_cmp()
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = { "gopls", "pyright" },
+    handlers = { lsp.default_setup },
+})
 
 lsp.setup()
