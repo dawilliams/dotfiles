@@ -28,9 +28,9 @@ return require('packer').startup(function(use)
             ts_update()
         end, }
 
-    use("mbbill/undotree")
-    use("tpope/vim-fugitive")
-    use("nvim-treesitter/nvim-treesitter-context")
+    use('mbbill/undotree')
+    use('tpope/vim-fugitive')
+    use('nvim-treesitter/nvim-treesitter-context')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -49,4 +49,8 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' }, -- Required
         }
     }
+
+    use('mfussenegger/nvim-dap')
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    use("jay-babu/mason-nvim-dap.nvim")
 end)

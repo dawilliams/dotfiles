@@ -10,6 +10,9 @@ end)
 
 lsp.extend_cmp()
 
+-- require('mason').setup({}) has to load before require("mason-nvim-dap").setup()
+-- in the mason.lua file. Type :scriptnames in vim to get load order.
+-- https://github.com/jay-babu/mason-nvim-dap.nvim#setup
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = { "gopls", "pyright" },
