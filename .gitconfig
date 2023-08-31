@@ -12,6 +12,9 @@
 [fetch]
     prune = true
 
+[push]
+    autoSetupRemote = true
+
 [alias]
     # Display all the git config list
     cf = config
