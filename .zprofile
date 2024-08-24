@@ -1,5 +1,5 @@
-# REFERENCE: Differences between .bashrc and .bash_profile files.
-# https://www.redswitches.com/blog/bashrc-vs-bash_profile-in-linux/
+# REFERENCE: Differences between .zshrc and .zprofile files.
+# https://mac.install.guide/terminal/zshrc-zprofile
 
 ## Homebrew
 ### Add Homebrew to $PATH
