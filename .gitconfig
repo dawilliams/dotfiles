@@ -1,0 +1,7 @@
+# Use ssh instead of https
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[init]
+    defaultBranch = main
+
