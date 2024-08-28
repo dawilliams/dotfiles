@@ -1,10 +1,15 @@
 #!/bin/zsh
 
-# Create array of things to install with Homebrew
-tools=('zsh' 'wezterm')
+# Create array of kegs or casks to install with Homebrew
+kegs=('zsh')
+casks=('wezterm' 'rectangle')
 
-for t in $tools; do
-    brew install $t
+for k in ${kegs}; do
+    brew install $k
+done
+
+for c in ${casks}; do
+    brew install --cask $c
 done
 
 # https://www.jetify.com/devbox/docs/installing_devbox/

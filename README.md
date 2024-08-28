@@ -12,3 +12,4 @@ git clone https://github.com/dawilliams/dotfiles
 ## What's installed
 - [zsh](https://www.zsh.org) via Homebrew
 - [devbox](https://www.jetify.com/devbox/docs) via curl
+- [rectange](https://rectangleapp.com) via Homebrew
