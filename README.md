@@ -29,4 +29,5 @@ chmod +x sync.sh
 - [devbox](https://www.jetify.com/devbox/docs) via curl
 - [rectange](https://rectangleapp.com) via Homebrew
 - [1password](https://1password.com) via HomeBrew
-- [1password-cli](https://1password.com/downloads/command-line) via devbox global 
+- [1password-cli](https://1password.com/downloads/command-line) via Devbox global 
+- [git](https://git-scm.com/) via Devbox global 
