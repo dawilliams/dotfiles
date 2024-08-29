@@ -9,9 +9,20 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
+config.font = wezterm.font("MesloLGS NF")
+config.font_size = 16
 
--- For example, changing the color scheme:
-config.color_scheme = 'AdventureTime'
+-- Remove tabs
+config.enable_tab_bar = false
+
+-- Remove title bar but keep resize window option
+config.window_decorations = "RESIZE"
+
+-- Set background transparancy
+config.window_background_opacity = 0.9
+
+-- Set background blur
+config.macos_window_background_blur = 50
 
 -- and finally, return the configuration to wezterm
 return config
