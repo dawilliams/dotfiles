@@ -34,3 +34,4 @@ chmod +x sync.sh
 
 ## Notes
 - Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)
+- The RectangleConfig.json can be imported via the Rectangle app.
