@@ -31,3 +31,6 @@ chmod +x sync.sh
 - [1password](https://1password.com) via HomeBrew
 - [1password-cli](https://1password.com/downloads/command-line) via Devbox global 
 - [git](https://git-scm.com/) via Devbox global 
+
+## Notes
+- Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)
