@@ -1,8 +1,11 @@
 /.devbox
+/.config/nvim/.git*
+/.config/nvim/LICENSE.md
+/.config/nvim/README.md
 /.git
 /.gitignore
 /README.md
+/RectangleConfig.json
 /devbox.*
 /install.sh
 /sync.sh
-/RectangleConfig.json

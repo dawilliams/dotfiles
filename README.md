@@ -7,7 +7,7 @@
 - Clone the dawilliams/dotfiles repo to your home directory
 ```bash
 cd ~
-git clone https://github.com/dawilliams/dotfiles
+git clone --recursive https://github.com/dawilliams/dotfiles
 ```
 - Run the install.sh script
 ```bash
@@ -34,6 +34,7 @@ chmod +x sync.sh
 - [starship prompt](https://starship.rs) via Devbox global
 - [neovim](https://neovim.io) via Devbox global
 - [ripgrep](https://github.com/BurntSushi/ripgrep) via Devbox global
+- [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master) via Git submodule
 
 ## Notes
 - Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)
