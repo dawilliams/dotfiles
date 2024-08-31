@@ -31,7 +31,8 @@ chmod +x sync.sh
 - [1password](https://1password.com) via HomeBrew
 - [1password-cli](https://1password.com/downloads/command-line) via Devbox global 
 - [git](https://git-scm.com/) via Devbox global 
-- [starship prompt](https://starship.rs) vi Devbox global
+- [starship prompt](https://starship.rs) via Devbox global
+- [neovim](https://neovim.io) via Devbox global
 
 ## Notes
 - Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)

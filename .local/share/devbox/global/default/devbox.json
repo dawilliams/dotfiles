@@ -4,7 +4,8 @@
     "_1password@2.29.0",
     "git@2.45.2",
     "drone-cli@1.8.0",
-    "starship@1.20.1"
+    "starship@1.20.1",
+    "neovim@0.10.1"
   ],
   "shell": {
     "init_hook": [
