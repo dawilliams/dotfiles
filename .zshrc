@@ -13,3 +13,7 @@ if [[ ! -a $(brew --prefix)/share/zsh/site-functions/_devbox ]]; then
     devbox completion zsh > $(brew --prefix)/share/zsh/site-functions/_devbox
     exec zsh -l
 fi
+
+# evals
+## Starship (https://starship.rs/)
+eval "$(starship init zsh)"
