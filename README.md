@@ -33,6 +33,7 @@ chmod +x sync.sh
 - [git](https://git-scm.com/) via Devbox global 
 - [starship prompt](https://starship.rs) via Devbox global
 - [neovim](https://neovim.io) via Devbox global
+- [ripgrep](https://github.com/BurntSushi/ripgrep) via Devbox global
 
 ## Notes
 - Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)

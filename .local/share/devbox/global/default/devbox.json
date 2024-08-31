@@ -5,7 +5,8 @@
     "git@2.45.2",
     "drone-cli@1.8.0",
     "starship@1.20.1",
-    "neovim@0.10.1"
+    "neovim@0.10.1",
+    "ripgrep@14.1.0"
   ],
   "shell": {
     "init_hook": [
