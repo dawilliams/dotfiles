@@ -35,6 +35,7 @@ chmod +x sync.sh
 - [neovim](https://neovim.io) via Devbox global
 - [ripgrep](https://github.com/BurntSushi/ripgrep) via Devbox global
 - [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master) via Git submodule
+- [todoist](https://todoist.com/downloads) via Homebrew
 
 ## Notes
 - Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)

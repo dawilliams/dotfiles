@@ -2,7 +2,7 @@
 
 # Create array of kegs or casks to install with Homebrew
 kegs=('zsh')
-casks=('wezterm' 'rectangle' '1Password')
+casks=('wezterm' 'rectangle' '1Password' 'todoist')
 
 for k in ${kegs}; do
     brew install $k
