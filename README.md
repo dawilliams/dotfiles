@@ -25,18 +25,26 @@ chmod +x sync.sh
 - Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
 
 ## What's installed
-- [zsh](https://www.zsh.org) via Homebrew
-- [devbox](https://www.jetify.com/devbox/docs) via curl
-- [rectange](https://rectangleapp.com) via Homebrew
-- [1password](https://1password.com) via HomeBrew
-- [1password-cli](https://1password.com/downloads/command-line) via Devbox global 
-- [git](https://git-scm.com/) via Devbox global 
-- [starship prompt](https://starship.rs) via Devbox global
-- [neovim](https://neovim.io) via Devbox global
-- [ripgrep](https://github.com/BurntSushi/ripgrep) via Devbox global
-- [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master) via Git submodule
-- [todoist](https://todoist.com/downloads) via Homebrew
-- [sync](https://www.sync.com) via Homebrew
+### Homebrew
+- [zsh](https://www.zsh.org)
+- [wezterm](https://wezfurlong.org/wezterm/index.html)
+- [rectange](https://rectangleapp.com)
+- [1password](https://1password.com)
+- [todoist](https://todoist.com/downloads)
+- [sync](https://www.sync.com)
+
+### Curl
+- [devbox](https://www.jetify.com/devbox/docs)
+
+### Devbox Global
+- [1password-cli](https://1password.com/downloads/command-line)
+- [git](https://git-scm.com/)
+- [starship prompt](https://starship.rs)
+- [neovim](https://neovim.io)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+### Git Submodule
+- [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master)
 
 ## Notes
 - Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)
