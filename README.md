@@ -47,5 +47,11 @@ chmod +x sync.sh
 - [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master)
 
 ## Notes
-- Devbox or Nix packages can be found on [Nixhub](https://www.nixhub.io)
 - The RectangleConfig.json can be imported via the Rectangle app.
+
+## FAQs
+**Q: How do I search for a Devbox package?**\
+**A:** `devbox search {package}` or search on [Nixhub](https://www.nixhub.io)
+
+**Q: How do I add a Devbox package to every environment on the machine? i.e. globally**\
+ **A:** `devbox global add {package}@{version}` where the `@{version}` is optional but recommended.
