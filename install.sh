@@ -17,3 +17,6 @@ curl -fsSL https://get.jetify.com/devbox | bash
 
 # Install devbox global packages
 devbox global install
+
+# https://github.com/docker/scout-cli
+curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | sh -s --

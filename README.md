@@ -35,6 +35,7 @@ chmod +x sync.sh
 
 ### Curl
 - [devbox](https://www.jetify.com/devbox/docs)
+- [docker-scout cli](https://github.com/docker/scout-cli)
 
 ### Devbox Global
 - [1password-cli](https://1password.com/downloads/command-line)
