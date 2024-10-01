@@ -6,7 +6,10 @@
     "drone-cli@1.8.0",
     "starship@1.20.1",
     "neovim@0.10.1",
-    "ripgrep@14.1.0"
+    "ripgrep@14.1.0",
+    "colima@0.7.5",
+    "docker@27.3.0",
+    "docker-compose@2.29.7"
   ],
   "shell": {
     "init_hook": [

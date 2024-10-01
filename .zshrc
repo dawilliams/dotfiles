@@ -17,6 +17,12 @@ if [[ ! -a $(brew --prefix)/share/zsh/site-functions/_devbox ]]; then
     exec zsh -l
 fi
 
+# exports
+## colima docker replacement
+export COLIMA_VM="default"
+export COLIMA_VM_SOCKET="${HOME}/.colima/${COLIMA_VM}/docker.sock"
+export DOCKER_HOST="unix://${COLIMA_VM_SOCKET}"
+
 # evals
 ## Starship (https://starship.rs/)
 eval "$(starship init zsh)"

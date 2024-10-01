@@ -42,12 +42,19 @@ chmod +x sync.sh
 - [starship prompt](https://starship.rs)
 - [neovim](https://neovim.io)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [colima](https://github.com/abiosoft/colima)
+- [docker](https://www.docker.com)
+- [docker-desktop](https://docs.docker.com/compose/)
 
 ### Git Submodule
 - [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master)
 
+### softwareupdate CLI Command
+- [rosetta](https://support.apple.com/en-us/102527) NOTE: I'm not sure I need this.
+
 ## Notes
 - The RectangleConfig.json can be imported via the Rectangle app.
+- Set up default colima VM based on [this article](https://medium.com/@guillem.riera/the-most-performant-docker-setup-on-macos-apple-silicon-m1-m2-m3-for-x64-amd64-compatibility-da5100e2557d)
 
 ## FAQs
 **Q: How do I search for a Devbox package?**\
@@ -55,3 +62,10 @@ chmod +x sync.sh
 
 **Q: How do I add a Devbox package to every environment on the machine? i.e. globally**\
  **A:** `devbox global add {package}@{version}` where the `@{version}` is optional but recommended.
+
+
+**Q: How do I create a new devbox local environment?**\
+ **A:** `devbox init` in the directory you want to create the environment.
+
+**Q: How do I add a Devbox package to a local environment?**\
+ **A:** `devbox add {package}@{version}` where the `@{version}` is optional but recommended.
