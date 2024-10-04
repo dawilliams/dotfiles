@@ -56,6 +56,7 @@ chmod +x sync.sh
 ## Notes
 - The RectangleConfig.json can be imported via the Rectangle app.
 - Set up default colima VM based on [this article](https://medium.com/@guillem.riera/the-most-performant-docker-setup-on-macos-apple-silicon-m1-m2-m3-for-x64-amd64-compatibility-da5100e2557d)
+- [Manage Git Submodules](https://medium.com/@nightheronry/how-to-add-and-update-git-submodules-dc1ba035e63b)
 
 ## FAQs
 **Q: How do I search for a Devbox package?**\
@@ -70,3 +71,6 @@ chmod +x sync.sh
 
 **Q: How do I add a Devbox package to a local environment?**\
  **A:** `devbox add {package}@{version}` where the `@{version}` is optional but recommended.
+
+**Q: How do I update a local git submodule with remote changes?**\
+**A:** `git submodule update --remote --merge`
