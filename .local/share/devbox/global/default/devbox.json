@@ -9,7 +9,8 @@
     "ripgrep@14.1.0",
     "colima@0.7.5",
     "docker@27.3.0",
-    "docker-compose@2.29.7"
+    "docker-compose@2.29.7",
+    "src-cli@5.5.0"
   ],
   "shell": {
     "init_hook": [

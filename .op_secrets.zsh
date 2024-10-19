@@ -6,3 +6,7 @@ export DRONE_AUTOSCALER="op://DevOps/Drone/AUTOSCALER"
 
 ## Github
 export GITHUB_TOKEN="op://Private/myGithub/PATs/work_laptop_terminal"
+
+## SourceGraph
+export SRC_ENDPOINT="op://Private/Sourcegraph/website"
+export SRC_ACCESS_TOKEN="op://Private/Sourcegraph/token"
