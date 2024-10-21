@@ -32,6 +32,7 @@ chmod +x sync.sh
 - [1password](https://1password.com)
 - [todoist](https://todoist.com/downloads)
 - [sync](https://www.sync.com)
+- [chainctl](https://edu.chainguard.dev/tags/chainctl/)
 
 ### Curl
 - [devbox](https://www.jetify.com/devbox/docs)
