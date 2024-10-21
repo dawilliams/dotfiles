@@ -11,6 +11,10 @@ alias drone="op run -- drone"
 ## git
 ### Top 10 git commands. Candidates for git aliases
 alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | head -n 10'
+
+## grype
+alias grypehtml="grype -o template -t ~/dev/ext/grype/templates/html.tmpl"
+
 ## neovim
 alias vi="nvim"
 alias vim="nvim"
@@ -26,6 +30,11 @@ fi
 export COLIMA_VM="default"
 export COLIMA_VM_SOCKET="${HOME}/.colima/${COLIMA_VM}/docker.sock"
 export DOCKER_HOST="unix://${COLIMA_VM_SOCKET}"
+
+# functions
+grypesum() {
+    grype $1 > /tmp/$1_cves
+}
 
 # evals
 ## Starship (https://starship.rs/)
