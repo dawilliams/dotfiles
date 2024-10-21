@@ -10,7 +10,10 @@
     "colima@0.7.5",
     "docker@27.3.0",
     "docker-compose@2.29.7",
-    "src-cli@5.5.0"
+    "src-cli@5.5.0",
+    "bash@5.2p32",
+    "gh@2.58.0",
+    "gojq@0.12.16"
   ],
   "shell": {
     "init_hook": [
