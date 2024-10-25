@@ -61,6 +61,7 @@ chmod +x sync.sh
 - [Google Sytle Guides](https://google.github.io/styleguide/)
 
 ## FAQs
+### devbox
 **Q: How do I search for a Devbox package?**\
 **A:** `devbox search {package}` or search on [Nixhub](https://www.nixhub.io)
 
@@ -74,5 +75,13 @@ chmod +x sync.sh
 **Q: How do I add a Devbox package to a local environment?**\
  **A:** `devbox add {package}@{version}` where the `@{version}` is optional but recommended.
 
+### github
 **Q: How do I update a local git submodule with remote changes?**\
 **A:** `git submodule update --remote --merge`
+
+### zsh
+**Q: How do I list defined functions?
+**A:** `print -l ${(ok)functions}`
+
+**Q: How do I show a function body?
+**A:** `functions {FUNCTION_NAME}`
