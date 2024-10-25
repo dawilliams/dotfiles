@@ -11,8 +11,6 @@ alias drone="op run -- drone"
 ## git
 ### Top 10 git commands. Candidates for git aliases
 alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | head -n 10'
-## grype
-alias grypehtml="grype -o template -t ~/dev/ext/grype/templates/html.tmpl"
 ## neovim
 alias vi="nvim"
 alias vim="nvim"
@@ -31,8 +29,16 @@ export COLIMA_VM_SOCKET="${HOME}/.colima/${COLIMA_VM}/docker.sock"
 export DOCKER_HOST="unix://${COLIMA_VM_SOCKET}"
 
 # functions
+## grype
+### Create html page from grype scan and open it with your default browser
+#### Requires templates from the grype git repository to be local.
+grypehtml() {
+    grype --output template --template ~/dev/ext/grype/templates/html.tmpl ${1} > /tmp/${1}_vuln_report.html
+    open /tmp/${1}_vuln_report.html
+}
+### Only provide grype's summary to stdout and redirect details to file in the /tmp directory
 grypesum() {
-    grype $1 > /tmp/$1_cves
+    grype ${1} > /tmp/$1_cves
 }
 
 # evals
