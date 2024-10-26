@@ -63,25 +63,46 @@ chmod +x sync.sh
 ## FAQs
 ### devbox
 **Q: How do I search for a Devbox package?**\
-**A:** `devbox search {package}` or search on [Nixhub](https://www.nixhub.io)
+**A:** Type the following or search on [Nixhub](https://www.nixhub.io)
+```bash
+devbox search {package}
+``` 
 
 **Q: How do I add a Devbox package to every environment on the machine? i.e. globally**\
- **A:** `devbox global add {package}@{version}` where the `@{version}` is optional but recommended.
+ **A:** Type following where the `@{version}` is optional but recommended.
 
+```bash
+devbox global add {package}@{version}
+``` 
 
 **Q: How do I create a new devbox local environment?**\
- **A:** `devbox init` in the directory you want to create the environment.
+ **A:** Type the following in the directory you want to create the environment.
+```bash
+devbox init
+``` 
 
 **Q: How do I add a Devbox package to a local environment?**\
- **A:** `devbox add {package}@{version}` where the `@{version}` is optional but recommended.
+ **A:** Type following where the `@{version}` is optional but recommended.
+```bash
+devbox add {package}@{version}
+```
 
 ### github
 **Q: How do I update a local git submodule with remote changes?**\
-**A:** `git submodule update --remote --merge`
+**A:** Type the following command in the repository directory
+```bash
+git submodule update --remote --merge
+```
 
 ### zsh
-**Q: How do I list defined functions?
-**A:** `print -l ${(ok)functions}`
+**Q: How do I list defined functions?**\
+**A:** Type the following in a terminal
+```bash
+print -l ${(ok)functions}
+```
 
-**Q: How do I show a function body?
-**A:** `functions {FUNCTION_NAME}`
+**Q: How do I show a function body?**\
+**A:** Type the following in a terminal
+```bash
+functions {FUNCTION_NAME}
+```
