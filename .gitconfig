@@ -2,6 +2,7 @@
 	defaultBranch = main
 
 [core]
+	editor = "nvim --clean"
 	pager = diff-so-fancy | less --tabs=4 -RF
 
 [color]
