@@ -1,26 +1,18 @@
-# Use ssh instead of https
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-
 [init]
-    defaultBranch = main
+	defaultBranch = main
 
-[alias]
-    st = status
-
-[push]
-    autoSetupRemote = true
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RF
-[interactive]
-	diffFilter = diff-so-fancy --patch
+
 [color]
 	ui = true
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
 [color "diff"]
 	meta = 11
 	frag = magenta bold
@@ -29,3 +21,16 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[push]
+	autoSetupRemote = true
+
+# Use ssh instead of https
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[alias]
+    st = status
