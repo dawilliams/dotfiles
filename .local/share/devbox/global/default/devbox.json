@@ -15,8 +15,8 @@
     "gh@2.58.0",
     "gojq@0.12.16",
     "grype@0.81.0",
-    "syft@1.13.0"
-
+    "syft@1.13.0",
+    "diff-so-fancy@1.4.4"
   ],
   "shell": {
     "init_hook": [
