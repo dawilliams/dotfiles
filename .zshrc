@@ -33,12 +33,20 @@ export DOCKER_HOST="unix://${COLIMA_VM_SOCKET}"
 ### Create html page from grype scan and open it with your default browser
 #### Requires templates from the grype git repository to be local.
 grypehtml() {
-    grype --output template --template ~/dev/ext/grype/templates/html.tmpl ${1} > /tmp/${1}_vuln_report.html
-    open /tmp/${1}_vuln_report.html
+    # The awk -F option is field separator
+    # $NF is the last field.
+    container_name=$(echo ${1} | awk -F / '{print $NF;}')
+    file_name=${container_name}_vulns_$(date +"%s").html
+    grype --output template --template ~/dev/ext/grype/templates/html.tmpl ${1} > /tmp/${file_name}
+    open /tmp/${file_name}
 }
 ### Only provide grype's summary to stdout and redirect details to file in the /tmp directory
 grypesum() {
-    grype ${1} > /tmp/$1_cves
+    # The awk -F option is field separator
+    # $NF is the last field.
+    container_name=$(echo ${1} | awk -F / '{print $NF;}')
+    file_name=${container_name}_vulns_$(date +"%s")
+    grype ${1} > /tmp/${file_name}
 }
 
 # evals
