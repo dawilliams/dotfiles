@@ -39,19 +39,32 @@ export DOCKER_HOST="unix://${COLIMA_VM_SOCKET}"
 ### Create html page from grype scan and open it with your default browser
 #### Requires templates from the grype git repository to be local.
 grypehtml() {
+    if [[ -z "$*" ]]; then
+      print "ERROR: The ${0} function requires a container name or path as its arguement."
+      print "The ${0} function runs grype on the supplied container, saves the results to html and opens the default browser"
+      return
+    fi
+    
     # The awk -F option is field separator
     # $NF is the last field.
     container_name=$(echo ${1} | awk -F / '{print $NF;}')
     file_name=${container_name}_vulns_$(date +"%s").html
+    print "grype --output template --template ~/dev/ext/grype/templates/html.tmpl ${1} > /tmp/${file_name}"
     grype --output template --template ~/dev/ext/grype/templates/html.tmpl ${1} > /tmp/${file_name}
     open /tmp/${file_name}
 }
 ### Only provide grype's summary to stdout and redirect details to file in the /tmp directory
 grypesum() {
+    if [[ -z "$*" ]]; then
+      print "ERROR: The ${0} function requires a container name or path as its arguement."
+      print "The ${0} function runs grype on the supplied container, printing the summary and redirecting the details to a file in the /tmp directory"
+      return
+    fi
     # The awk -F option is field separator
     # $NF is the last field.
     container_name=$(echo ${1} | awk -F / '{print $NF;}')
     file_name=${container_name}_vulns_$(date +"%s")
+    print "grype ${1} > /tmp/${file_name}"
     grype ${1} > /tmp/${file_name}
 }
 
