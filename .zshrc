@@ -4,6 +4,10 @@
 
 # Enable zsh shell completions
 autoload -U compinit; compinit
+# Enable zsh help
+unalias run-help
+autoload run-help
+HELPDIR=$(command brew --prefix)/share/zsh/help
 
 # aliases
 ## drone cli
@@ -14,6 +18,8 @@ alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | h
 ## neovim
 alias vi="nvim"
 alias vim="nvim"
+## zsh
+alias help="run-help"
 
 # completions
 ## devbox
