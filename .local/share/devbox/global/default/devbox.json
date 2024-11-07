@@ -16,7 +16,8 @@
     "gojq@0.12.16",
     "grype@0.81.0",
     "syft@1.13.0",
-    "diff-so-fancy@1.4.4"
+    "diff-so-fancy@1.4.4",
+    "docker-credential-helpers@0.8.2"
   ],
   "shell": {
     "init_hook": [
