@@ -5,11 +5,13 @@ kegs=('zsh')
 casks=('wezterm' 'rectangle' '1Password' 'todoist' 'sync')
 
 for k in ${kegs}; do
-    brew install $k
+    # Location of homebrew on Apple Silicon
+    /opt/homebrew/bin/brew install $k
 done
 
 for c in ${casks}; do
-    brew install --cask $c
+    # Location of homebrew on Apple Silicon
+    /opt/homebrew/bin/brew install --cask $c
 done
 
 # https://www.jetify.com/devbox/docs/installing_devbox/
