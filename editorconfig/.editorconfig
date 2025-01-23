@@ -1,0 +1,4 @@
+# This files syncs neovim and some LSPs when formatting file types
+[*.lua]
+indent_style = space
+indent_size = 2
