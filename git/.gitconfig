@@ -1,10 +1,6 @@
 [init]
 	defaultBranch = main
 
-[core]
-	editor = "nvim --clean"
-	pager = diff-so-fancy | less --tabs=4 -RF
-
 [color]
 	ui = true
 
@@ -23,9 +19,6 @@
 	new = green bold
 	whitespace = red reverse
 
-[interactive]
-	diffFilter = diff-so-fancy --patch
-
 [push]
 	autoSetupRemote = true
 
@@ -35,6 +28,7 @@
 
 [user]
 	name = David Williams
+	email = williamsgang1@gmail.com
 
 [alias]
 	st = status
