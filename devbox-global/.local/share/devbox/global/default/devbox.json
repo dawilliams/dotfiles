@@ -5,7 +5,8 @@
     "neovim@0.10",
     "lua-language-server@3.13",
     "ripgrep@14.1",
-    "starship@1.22"
+    "starship@1.22",
+    "direnv@2.35.0"
   ],
   "shell": {
     "init_hook": [
