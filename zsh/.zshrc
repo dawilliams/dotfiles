@@ -72,3 +72,5 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # evals
 ## Starship (https://starship.rs/)
 eval "$(starship init zsh)"
+## direnv
+eval "$(direnv hook zsh)"
