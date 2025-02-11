@@ -23,6 +23,7 @@ chmod +x sync.sh
 ```
 - Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 - Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
+- Follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instruction in the Use multiple Github accounts section.
 
 ## What's installed
 ### Homebrew
