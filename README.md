@@ -1,5 +1,9 @@
 # dotfiles 
 ## Inital Setup
+### Mac Config
+- Setup Switch Workspaces Shortcut
+Select Settings => keyboard => Keyboard shortcuts => Mission Control => Mission Control
+
 - Install [Homebrew](https://docs.brew.sh/Installation#macos-requirements)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -7,23 +11,19 @@
 - Clone the dawilliams/dotfiles repo to your home directory
 ```bash
 cd ~
-git clone --recursive https://github.com/dawilliams/dotfiles
+git clone https://github.com/dawilliams/dotfiles
 ```
-- Run the install.sh script
+- Run the setup.sh script
 ```bash
 cd ~/dotfiles
-chmod +x install.sh
-./install.sh
+chmod +x setup.sh
+./setup.sh
 ```
-- Run the sync.sh script
-```bash
-cd ~/dotfiles
-chmod +x sync.sh
-./sync.sh
-```
-- Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
+- ??? Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 - Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
 - Follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instruction in the Use multiple Github accounts section.
+- Checkout obsidian vault to the Documents directory.
+
 
 ## What's installed
 ### Homebrew
