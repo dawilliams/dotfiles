@@ -1,6 +1,54 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "lua-language-server@3.13": {
+      "last_modified": "2025-02-08T12:54:32Z",
+      "resolved": "github:NixOS/nixpkgs/fa35a3c8e17a3de613240fea68f876e5b4896aec#lua-language-server",
+      "source": "devbox-search",
+      "version": "3.13.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b415mbpzllvgp5l2f5wld746ap9189nr-lua-language-server-3.13.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/b415mbpzllvgp5l2f5wld746ap9189nr-lua-language-server-3.13.6"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/858y76nf7d272fchxzk91n0ys616awhx-lua-language-server-3.13.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/858y76nf7d272fchxzk91n0ys616awhx-lua-language-server-3.13.6"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1h4d92g07dx3pv6m70v8707pycl6icj3-lua-language-server-3.13.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1h4d92g07dx3pv6m70v8707pycl6icj3-lua-language-server-3.13.6"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hvi7gsqy0fs974p3m26jfppqw6d8havs-lua-language-server-3.13.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hvi7gsqy0fs974p3m26jfppqw6d8havs-lua-language-server-3.13.6"
+        }
+      }
+    },
     "stow@2.4": {
       "last_modified": "2024-11-28T07:51:56Z",
       "resolved": "github:NixOS/nixpkgs/226216574ada4c3ecefcbbec41f39ce4655f78ef#stow",
