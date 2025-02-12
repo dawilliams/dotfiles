@@ -22,7 +22,7 @@ return {
       require('telescope').load_extension('fzf')                                -- significantly improve sorting performance
 
       vim.keymap.set("n", "<space>fh", require('telescope.builtin').help_tags)  -- fh = find help
-      vim.keymap.set("n", "<space>fd", require('telescope.builtin').find_files) -- fd = find directory
+      vim.keymap.set("n", "<space>ff", require('telescope.builtin').find_files) -- ff = find directory
       -- en = edit neovim
       vim.keymap.set("n", "<space>en", function()
         require('telescope.builtin').find_files {
