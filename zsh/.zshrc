@@ -17,6 +17,8 @@ HELPDIR=$(command brew --prefix)/share/zsh/help
 alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | head -n 10'
 ## neovim
 alias nv="nvim"
+## ripgrep
+alias rgh="rg --hidden "
 ## zsh
 alias help="run-help"
 
