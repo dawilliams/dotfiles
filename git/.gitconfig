@@ -26,9 +26,5 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
-[user]
-	name = David Williams
-	email = williamsgang1@gmail.com
-
 [alias]
 	st = status
