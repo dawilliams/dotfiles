@@ -1,30 +1,63 @@
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#default-branch
 [init]
 	defaultBranch = main
 
-[color]
-	ui = true
+[alias]
+	st = status
 
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#listing-branches
+[branch]
+        sort = -committerdate
 
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+[column]
+	ui = auto
 
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#commit-with-diffs
+[commit]
+	verbose = true
+
+#[color]
+#	ui = true
+
+#[color "diff-highlight"]
+#	oldNormal = red bold
+#	oldHighlight = red bold 52
+#	newNormal = green bold
+#	newHighlight = green bold 22
+
+#[color "diff"]
+#	meta = 11
+#	frag = magenta bold
+#	func = 146 bold
+#	commit = yellow bold
+#	old = red bold
+#	new = green bold
+#	whitespace = red reverse
+
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#better-diff
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#autocorrect-prompting
+[help]
+	autocorrect = prompt
+
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#better-merge-conflicts
+[merge]
+	conflictstyle = zdiff3
+
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#better-pushing
 [push]
 	autoSetupRemote = true
+	followTags = true
+
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/#listing-tags
+[tag]
+	sort = version:refname
 
 # Use ssh instead of https
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-
-[alias]
-	st = status
