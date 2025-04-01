@@ -1,57 +1,60 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/88e992074d86ad50249de12b7fb8dbaadf8dc0c5?lastModified=1743472173&narHash=sha256-xwNv3FYTC5pl4QVZ79gUxqCEvqKzcKdXycpH5UbYscw%3D"
+    },
     "lua-language-server@3.13": {
-      "last_modified": "2025-02-08T12:54:32Z",
-      "resolved": "github:NixOS/nixpkgs/fa35a3c8e17a3de613240fea68f876e5b4896aec#lua-language-server",
+      "last_modified": "2025-03-20T07:39:01Z",
+      "resolved": "github:NixOS/nixpkgs/7344a3b78128f7b1765dba89060b015fb75431a7#lua-language-server",
       "source": "devbox-search",
-      "version": "3.13.6",
+      "version": "3.13.9",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/b415mbpzllvgp5l2f5wld746ap9189nr-lua-language-server-3.13.6",
+              "path": "/nix/store/kngpnxz57rv55ilznnjs9js01d9ckhd1-lua-language-server-3.13.9",
               "default": true
             }
           ],
-          "store_path": "/nix/store/b415mbpzllvgp5l2f5wld746ap9189nr-lua-language-server-3.13.6"
+          "store_path": "/nix/store/kngpnxz57rv55ilznnjs9js01d9ckhd1-lua-language-server-3.13.9"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/858y76nf7d272fchxzk91n0ys616awhx-lua-language-server-3.13.6",
+              "path": "/nix/store/s49748ia6ykih79khrc1c0lk7244wm6p-lua-language-server-3.13.9",
               "default": true
             }
           ],
-          "store_path": "/nix/store/858y76nf7d272fchxzk91n0ys616awhx-lua-language-server-3.13.6"
+          "store_path": "/nix/store/s49748ia6ykih79khrc1c0lk7244wm6p-lua-language-server-3.13.9"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/1h4d92g07dx3pv6m70v8707pycl6icj3-lua-language-server-3.13.6",
+              "path": "/nix/store/z7gb7c87bh496b176gpasxsid5d59hls-lua-language-server-3.13.9",
               "default": true
             }
           ],
-          "store_path": "/nix/store/1h4d92g07dx3pv6m70v8707pycl6icj3-lua-language-server-3.13.6"
+          "store_path": "/nix/store/z7gb7c87bh496b176gpasxsid5d59hls-lua-language-server-3.13.9"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/hvi7gsqy0fs974p3m26jfppqw6d8havs-lua-language-server-3.13.6",
+              "path": "/nix/store/ygf553mqg23m24yk1lm9zkacgrk3ik9i-lua-language-server-3.13.9",
               "default": true
             }
           ],
-          "store_path": "/nix/store/hvi7gsqy0fs974p3m26jfppqw6d8havs-lua-language-server-3.13.6"
+          "store_path": "/nix/store/ygf553mqg23m24yk1lm9zkacgrk3ik9i-lua-language-server-3.13.9"
         }
       }
     },
     "stow@2.4": {
-      "last_modified": "2025-01-19T08:16:51Z",
-      "resolved": "github:NixOS/nixpkgs/50165c4f7eb48ce82bd063e1fb8047a0f515f8ce#stow",
+      "last_modified": "2025-03-11T17:52:14Z",
+      "resolved": "github:NixOS/nixpkgs/0d534853a55b5d02a4ababa1d71921ce8f0aee4c#stow",
       "source": "devbox-search",
       "version": "2.4.1",
       "systems": {
@@ -59,41 +62,41 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/26219ymljlrz8zqa6madi9l1m8zv0sbf-stow-2.4.1",
+              "path": "/nix/store/1g9rb7qkiwkzs17j0ih1zxwfhj0r039p-stow-2.4.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/26219ymljlrz8zqa6madi9l1m8zv0sbf-stow-2.4.1"
+          "store_path": "/nix/store/1g9rb7qkiwkzs17j0ih1zxwfhj0r039p-stow-2.4.1"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/gpma7qvaccm6drrgb521kxgllb8zkx91-stow-2.4.1",
+              "path": "/nix/store/mp9ssdpys3w2cladwpa3an68nb2d2zcz-stow-2.4.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/gpma7qvaccm6drrgb521kxgllb8zkx91-stow-2.4.1"
+          "store_path": "/nix/store/mp9ssdpys3w2cladwpa3an68nb2d2zcz-stow-2.4.1"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/w62i8bfnqcmg13yfbw266rdpnd7flp9v-stow-2.4.1",
+              "path": "/nix/store/2qhvz68jy4ja7zkbhx5klcflv3j9js3a-stow-2.4.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/w62i8bfnqcmg13yfbw266rdpnd7flp9v-stow-2.4.1"
+          "store_path": "/nix/store/2qhvz68jy4ja7zkbhx5klcflv3j9js3a-stow-2.4.1"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/zp203wfcr071m80n009nc0ngxyp6crpw-stow-2.4.1",
+              "path": "/nix/store/a9zm7ssc7fp1szx2fn0kf8rfmipsvw0y-stow-2.4.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/zp203wfcr071m80n009nc0ngxyp6crpw-stow-2.4.1"
+          "store_path": "/nix/store/a9zm7ssc7fp1szx2fn0kf8rfmipsvw0y-stow-2.4.1"
         }
       }
     }
