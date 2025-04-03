@@ -1,4 +1,5 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
+
 local flag_help
 local arg_role
 local role
@@ -25,7 +26,7 @@ zparseopts -D -E -F -- \
 # If $arg_role is not equal to home or work print error and display usage
 case $arg_role[-1] in
   home)
-    role="home" 
+    role="home"
     ;;
   work)
     role="work"
@@ -60,7 +61,6 @@ fi
 echo "---------------------------------------------------------------------------"
 echo "Installing brew kegs"
 echo "---------------------------------------------------------------------------"
-
 for k in ${kegs}; do
     /opt/homebrew/bin/brew install $k
 done
@@ -80,12 +80,12 @@ echo "Installing devbox"
 echo "---------------------------------------------------------------------------"
 curl -fsSL https://get.jetify.com/devbox | bash
 
-# Run the sync script in the devbox.json file
-cd $HOME/dotfiles
+cd ${HOME}/dotfiles
+# Run stow.sh to symlink dotfiles to home directory
 echo "---------------------------------------------------------------------------"
 echo "Running stow to set up dotfiles"
 echo "---------------------------------------------------------------------------"
-devbox run sync
+./stow --action stow --role ${role}
 
 # Install devbox global packages listed
 echo "---------------------------------------------------------------------------"
