@@ -3,17 +3,5 @@
   "packages": [
     "stow@2.4",
     "lua-language-server@3.13"
-  ],
-  "shell": {
-    "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null"
-    ],
-    "scripts": {
-      "sync": [
-        "cd $DEVBOX_PROJECT_ROOT",
-        "echo \"Run \"stow DIR_NAME\" for every top level directory in the $DEVBOX_PROJECT_ROOT directory\"",
-        "for d in $(ls -d */ | cut -f1 -d'/'); do \n stow $d \n done"
-      ]
-    }
-  }
+  ]
 }
