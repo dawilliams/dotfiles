@@ -80,12 +80,13 @@ echo "Installing devbox"
 echo "---------------------------------------------------------------------------"
 curl -fsSL https://get.jetify.com/devbox | bash
 
+## May have to restart terminal first.
 cd ${HOME}/dotfiles
 # Run stow.sh to symlink dotfiles to home directory
 echo "---------------------------------------------------------------------------"
 echo "Running stow to set up dotfiles"
 echo "---------------------------------------------------------------------------"
-./stow --action stow --role ${role}
+./stow.sh --action stow --role ${role}
 
 # Install devbox global packages listed
 echo "---------------------------------------------------------------------------"
