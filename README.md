@@ -1,5 +1,8 @@
 # dotfiles 
 ## Inital Setup
+> [!WARNING]  
+> If restoring from a time machine backup, restart your computer before proceeding.
+
 ### Mac Config
 - Setup Switch Workspaces Shortcut
 Select Settings => keyboard => Keyboard shortcuts => Mission Control => Mission Control
