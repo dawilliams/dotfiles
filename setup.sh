@@ -82,6 +82,12 @@ curl -fsSL https://get.jetify.com/devbox | bash
 
 ## May have to restart terminal first.
 cd ${HOME}/dotfiles
+# Initialize local devbox environment by running devbox shell
+echo "---------------------------------------------------------------------------"
+echo "Initialize devbox local environment"
+echo "---------------------------------------------------------------------------"
+devbox shell
+
 # Run stow.sh to symlink dotfiles to home directory
 echo "---------------------------------------------------------------------------"
 echo "Running stow to set up dotfiles"
