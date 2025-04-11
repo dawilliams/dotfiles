@@ -22,6 +22,15 @@ cd ~/dotfiles
 chmod +x setup.sh
 ./setup.sh
 ```
+- Run the stow.sh script
+```bash
+./stow.sh --action stow --role [home|work]
+```
+- Run the devbox global install command
+```bash
+devbox global install
+```
+
 - ??? Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 - Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
 - Follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instruction in the Use multiple Github accounts section.
@@ -31,12 +40,11 @@ chmod +x setup.sh
 ## What's installed
 ### Homebrew
 - [zsh](https://www.zsh.org)
-- [wezterm](https://wezfurlong.org/wezterm/index.html)
-- [rectange](https://rectangleapp.com)
+- [ghostty](https://https://ghostty.org/docs)
 - [1password](https://1password.com)
 - [todoist](https://todoist.com/downloads)
 - [sync](https://www.sync.com)
-- [chainctl](https://edu.chainguard.dev/tags/chainctl/)
+- [obsidian](https://obsidian.md)
 
 ### Curl
 - [devbox](https://www.jetify.com/devbox/docs)
@@ -53,16 +61,11 @@ chmod +x setup.sh
 - [docker](https://www.docker.com)
 - [docker-desktop](https://docs.docker.com/compose/)
 
-### Git Submodule
-- [kickstart-modular.nvim](https://github.com/dawilliams/kickstart-modular.nvim/tree/master)
-
 ### softwareupdate CLI Command
 - [rosetta](https://support.apple.com/en-us/102527) NOTE: I'm not sure I need this.
 
 ## Notes
-- The RectangleConfig.json can be imported via the Rectangle app.
 - Set up default colima VM based on [this article](https://medium.com/@guillem.riera/the-most-performant-docker-setup-on-macos-apple-silicon-m1-m2-m3-for-x64-amd64-compatibility-da5100e2557d)
-- [Manage Git Submodules](https://medium.com/@nightheronry/how-to-add-and-update-git-submodules-dc1ba035e63b)
 - [Google Sytle Guides](https://google.github.io/styleguide/)
 
 ## FAQs
