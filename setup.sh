@@ -87,15 +87,3 @@ echo "--------------------------------------------------------------------------
 echo "Initialize devbox local environment"
 echo "---------------------------------------------------------------------------"
 devbox shell
-
-# Run stow.sh to symlink dotfiles to home directory
-echo "---------------------------------------------------------------------------"
-echo "Running stow to set up dotfiles"
-echo "---------------------------------------------------------------------------"
-./stow.sh --action stow --role ${role}
-
-# Install devbox global packages listed
-echo "---------------------------------------------------------------------------"
-echo "Running devbox to install global packages"
-echo "---------------------------------------------------------------------------"
-devbox global install
