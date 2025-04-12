@@ -31,38 +31,34 @@ chmod +x setup.sh
 devbox global install
 ```
 
-- ??? Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
-- Follow the [1Password for SSH & Git](https://developer.1password.com/docs/ssh) instructions
-- Follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instruction in the Use multiple Github accounts section.
+- [Don't need this] Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
+- Follow the [Turn on the 1Password SSH Agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) instructions
+- Create the `Github.pub` file in the `~/.ssh` folder and add Github's public key to it follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instruction in the Use multiple Github accounts section.
 - Checkout obsidian vault to the Documents directory.
 
 
 ## What's installed
-### Homebrew
-- [zsh](https://www.zsh.org)
-- [ghostty](https://https://ghostty.org/docs)
-- [1password](https://1password.com)
-- [todoist](https://todoist.com/downloads)
-- [sync](https://www.sync.com)
-- [obsidian](https://obsidian.md)
-
 ### Curl
 - [devbox](https://www.jetify.com/devbox/docs)
-- [docker-scout cli](https://github.com/docker/scout-cli)
+- [homebrew](https://brew.sh)
 - [mint](https://github.com/mintoolkit/mint?tab=readme-ov-file#scripted-install)
 
+### Homebrew
+- [1password](https://1password.com)
+- [ghostty](https://https://ghostty.org/docs)
+- [obsidian](https://obsidian.md)
+- [sync](https://www.sync.com)
+- [todoist](https://todoist.com/downloads)
+- [zsh](https://www.zsh.org)
+- Home
+  - [arc](https://arc.net/)
+  - [slack](https://slack.com)
+
 ### Devbox Global
-- [1password-cli](https://1password.com/downloads/command-line)
 - [git](https://git-scm.com/)
-- [starship prompt](https://starship.rs)
 - [neovim](https://neovim.io)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [colima](https://github.com/abiosoft/colima)
-- [docker](https://www.docker.com)
-- [docker-desktop](https://docs.docker.com/compose/)
-
-### softwareupdate CLI Command
-- [rosetta](https://support.apple.com/en-us/102527) NOTE: I'm not sure I need this.
+- [starship prompt](https://starship.rs)
 
 ## Notes
 - Set up default colima VM based on [this article](https://medium.com/@guillem.riera/the-most-performant-docker-setup-on-macos-apple-silicon-m1-m2-m3-for-x64-amd64-compatibility-da5100e2557d)
