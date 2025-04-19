@@ -71,6 +71,9 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 #    grype ${1} > /tmp/${file_name}
 #}
 
+# path modiifictions
+path+=("${HOME}/.local/bin")
+
 # evals
 ## Starship (https://starship.rs/)
 eval "$(starship init zsh)"
