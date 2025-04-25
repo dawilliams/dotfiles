@@ -72,7 +72,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 #}
 
 # path modiifictions
-path+=("${HOME}/.shipt/bin")
+path+=("${HOME}/.shipt")
 
 # evals
 ## Starship (https://starship.rs/)
