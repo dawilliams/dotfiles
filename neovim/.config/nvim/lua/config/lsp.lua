@@ -1,3 +1,4 @@
+-- Format on Save
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -16,5 +17,22 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Go: Organize Imports
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+    local params = vim.lsp.util.make_range_params()
+    params.context = { only = { "source.organizeImports" } }
+    local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, 1000)
+    for _, res in pairs(result or {}) do
+      for _, action in pairs(res.result or {}) do
+        if action.edit then
+          vim.lsp.util.apply_workspace_edit(action.edit, "utf-8")
+        end
+      end
+    end
+  end,
+})
+
 -- Enable each language server by filename under the lsp/ folder
-vim.lsp.enable({ "lua_ls" })
+vim.lsp.enable({ "lua_ls", "gopls" })
