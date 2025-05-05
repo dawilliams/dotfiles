@@ -5,7 +5,8 @@
     "starship@1.22",
     "git@2.48",
     "neovim@0.11",
-    "direnv@2.36"
+    "direnv@2.36",
+    "curlie@1.7"
   ],
   "shell": {
     "init_hook": [

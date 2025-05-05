@@ -1,6 +1,54 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "curlie@1.7": {
+      "last_modified": "2025-04-12T07:19:22Z",
+      "resolved": "github:NixOS/nixpkgs/2349f9de17183971db12ae9e0123dab132023bd7#curlie",
+      "source": "devbox-search",
+      "version": "1.7.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zns8kxmdmazq6h1a0cpsx48q46f205hz-curlie-1.7.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zns8kxmdmazq6h1a0cpsx48q46f205hz-curlie-1.7.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/n52zk415xxnwcvlimc1ccsl5gmxkjwx0-curlie-1.7.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/n52zk415xxnwcvlimc1ccsl5gmxkjwx0-curlie-1.7.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6jp9hdljrjgm9j6w0c3sbwxg1zkan17d-curlie-1.7.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6jp9hdljrjgm9j6w0c3sbwxg1zkan17d-curlie-1.7.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bvbr90a63m69yxg08hjp2v1lc62hcgq1-curlie-1.7.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bvbr90a63m69yxg08hjp2v1lc62hcgq1-curlie-1.7.2"
+        }
+      }
+    },
     "direnv@2.36": {
       "last_modified": "2025-04-12T07:19:22Z",
       "resolved": "github:NixOS/nixpkgs/2349f9de17183971db12ae9e0123dab132023bd7#direnv",
