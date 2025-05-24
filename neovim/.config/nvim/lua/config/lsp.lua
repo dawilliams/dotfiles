@@ -35,4 +35,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 -- Enable each language server by filename under the lsp/ folder
-vim.lsp.enable({ "lua_ls", "gopls" })
+vim.lsp.enable({ "lua_ls", "gopls", "jsonls" })
