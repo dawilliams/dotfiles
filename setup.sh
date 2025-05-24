@@ -42,7 +42,7 @@ esac
 shared_kegs=('zsh')
 shared_casks=('ghostty' 'todoist' 'sync' 'obsidian')
 # kegs and casks only installed for the home role
-home_kegs=()
+home_kegs=('vscode-langservers-extracted')
 home_casks=('arc' '1Password' 'slack')
 # kegs and casks only installed for the work role
 work_kegs=()
