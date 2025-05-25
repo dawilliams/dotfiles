@@ -267,6 +267,54 @@
           "store_path": "/nix/store/d2g5lzr45z3ysszbmvqzz6yskzp2wd6q-starship-1.22.1"
         }
       }
+    },
+    "tree@2.2": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#tree",
+      "source": "devbox-search",
+      "version": "2.2.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4k68hkqsx4nyzncqdqm0az0sjbp3qb4x-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4k68hkqsx4nyzncqdqm0az0sjbp3qb4x-tree-2.2.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/l8p5126km152gfrf1ccsi841sf6qw4iv-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/l8p5126km152gfrf1ccsi841sf6qw4iv-tree-2.2.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hz7yr86j6j1dxa4kfbskaksrbcyhdcxm-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hz7yr86j6j1dxa4kfbskaksrbcyhdcxm-tree-2.2.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wngjygf5hvr88144fad4gbzag1yc8bd0-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wngjygf5hvr88144fad4gbzag1yc8bd0-tree-2.2.1"
+        }
+      }
     }
   }
 }
