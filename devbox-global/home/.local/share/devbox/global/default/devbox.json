@@ -2,11 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
   "packages": [
     "ripgrep@14.1",
-    "starship@1.22",
-    "git@2.48",
     "neovim@0.11",
     "direnv@2.36",
-    "tree@2.2"
+    "tree@2.2",
+    "starship@1.23",
+    "git@2.49"
   ],
   "shell": {
     "init_hook": [
