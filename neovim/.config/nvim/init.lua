@@ -27,7 +27,8 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- keymaps
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')         -- When in normal mode("n"), clear highlights on search when pressing <Esc>
+vim.keymap.set('n', '-', '<cmd>Oil --float<CR>')            -- When in normal mode("n"), press - to open the Oil file browser
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')         -- When in normal mode("n"), press <Esc> to clear highlights on search
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>") -- When in normal mode("n"), source (run) the current file(%)
 vim.keymap.set("n", "<space>x", ":.lua<CR>")                -- When in normal mode("n"), source (run) the current line
 vim.keymap.set("v", "<space>x", ":lua<CR>")                 -- When in visual mode("v"), source (run) the selected line(s)
