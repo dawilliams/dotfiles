@@ -4,27 +4,29 @@ require("config.lsp")
 require("config.terminal")
 
 -- options
+vim.opt.undofile = true -- Save undo history
+vim.opt.autoindent = true -- Keep indentation from previous line
+vim.opt.breakindent = true -- Every wrapped line will continue visually indented
+vim.opt.smartindent = true -- Determine indention based on characters and other criteria
+vim.opt.cursorline = true -- Show which line your cursor is on
+vim.opt.number = true -- Show line numbers
+vim.opt.relativenumber = true -- Show line numbers relative to the cursor line
+vim.opt.showmode = false -- Don't show the mode, since it's already in the status line
+vim.opt.mouse = "a" -- Enable mouse mode, useful for resizing splits
 vim.opt.clipboard = "unnamedplus" -- Allow "p" in addition ctrl-p to paste from clipboard
-vim.opt.cursorline = true         -- Show which line your cursor is on
-vim.opt.inccommand = "split"      -- Preview substitutions live, as you type!
-vim.o.undofile = true             -- Save undo history
-
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
---
---  Notice listchars is set using `vim.opt` instead of `vim.o`.
---  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
---   See `:help lua-options`
---   and `:help lua-options-guide`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
--- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.ignorecase = true -- Ignore case in searches
+vim.opt.smartcase = true -- Override ignorecase if search pattern contains a capital letter
+vim.opt.splitright = true -- Open new tab to the right
+vim.opt.splitbelow = true -- Open new tab to the bottom
+vim.opt.inccommand = "split" -- Preview substitutions live, as you type!
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.shiftwidth = 4 -- Amount to indent with << and >>
+vim.opt.smarttab = true
+vim.opt.softtabstop = 4 -- How many spaces are applied when pressing tab
+vim.opt.tabstop = 4 -- How many spaces are shown per tab
+vim.opt.list = true -- Show whitespace characters
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Configure how to display whitespace characters
 
 -- keymaps
 vim.keymap.set('n', '-', '<cmd>Oil --float<CR>')            -- When in normal mode("n"), press - to open the Oil file browser
