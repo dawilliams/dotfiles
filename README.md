@@ -19,7 +19,6 @@ git clone https://github.com/dawilliams/dotfiles
 - Run the setup.sh script
 ```bash
 cd ~/dotfiles
-chmod +x setup.sh
 ./setup.sh
 ```
 - Run the stow.sh script
@@ -33,7 +32,7 @@ devbox global install
 
 - [Don't need this] Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 - Follow the [Turn on the 1Password SSH Agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) instructions
-- Create the `Github.pub` file in the `~/.ssh` folder and add Github's public key to it follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instruction in the Use multiple Github accounts section.
+- Download your public key to the `~/.ssh/Github.pub` file and add Github's public key to it follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instructions in the Use multiple Github accounts section.
 - Checkout obsidian vault to the Documents directory.
 
 
