@@ -269,6 +269,54 @@
         }
       }
     },
+    "tree-sitter@0.25": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#tree-sitter",
+      "source": "devbox-search",
+      "version": "0.25.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mcla2hvwrsizgbl5kvvyishibnxwwp48-tree-sitter-0.25.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mcla2hvwrsizgbl5kvvyishibnxwwp48-tree-sitter-0.25.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pxwyq7hhp8apy80955828xxk3ybilxsj-tree-sitter-0.25.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/pxwyq7hhp8apy80955828xxk3ybilxsj-tree-sitter-0.25.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/drgx93q4hzar6r7gh8acin1szi382gzm-tree-sitter-0.25.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/drgx93q4hzar6r7gh8acin1szi382gzm-tree-sitter-0.25.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xa5nkrg7h2akk0962c3k9hxly104yq0k-tree-sitter-0.25.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xa5nkrg7h2akk0962c3k9hxly104yq0k-tree-sitter-0.25.3"
+        }
+      }
+    },
     "tree@2.2": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#tree",

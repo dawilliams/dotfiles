@@ -35,13 +35,27 @@ vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>") -- When in normal mo
 vim.keymap.set("n", "<space>x", ":.lua<CR>")                -- When in normal mode("n"), source (run) the current line
 vim.keymap.set("v", "<space>x", ":lua<CR>")                 -- When in visual mode("v"), source (run) the selected line(s)
 
--- Hightlight when yanking (copying) text
--- Try it with `yap` in normal mode
--- See `:help vim.highlight.on_yank()`
+-- auto commands
+--- Hightlight when yanking (copying) text
+--- Try it with `yap` in normal mode
+--- See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
+  end,
+})
+
+--- Ennable treesitter highlighting
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go', 'lua', 'json' },
+  callback = function()
+    -- syntax highlighting, provided by Neovim
+    vim.treesitter.start()
+    -- folds, provided by Neovim
+    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+    -- indentation, provided by nvim-treesitter
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end,
 })

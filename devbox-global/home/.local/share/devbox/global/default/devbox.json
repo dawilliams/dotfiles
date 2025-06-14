@@ -6,7 +6,8 @@
     "direnv@2.36",
     "tree@2.2",
     "starship@1.23",
-    "git@2.49"
+    "git@2.49",
+    "tree-sitter@0.25"
   ],
   "shell": {
     "init_hook": [
