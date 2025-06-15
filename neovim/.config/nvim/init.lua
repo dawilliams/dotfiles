@@ -29,11 +29,11 @@ vim.opt.list = true -- Show whitespace characters
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Configure how to display whitespace characters
 
 -- keymaps
-vim.keymap.set('n', '-', '<cmd>Oil --float<CR>')            -- When in normal mode("n"), press - to open the Oil file browser
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')         -- When in normal mode("n"), press <Esc> to clear highlights on search
-vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>") -- When in normal mode("n"), source (run) the current file(%)
-vim.keymap.set("n", "<space>x", ":.lua<CR>")                -- When in normal mode("n"), source (run) the current line
-vim.keymap.set("v", "<space>x", ":lua<CR>")                 -- When in visual mode("v"), source (run) the selected line(s)
+vim.keymap.set('n', '-', '<cmd>Oil --float<CR>', { desc = 'Open Parent Directory in Oil' })       -- When in normal mode("n"), press - to open the Oil file browser
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear highlights on search' })      -- When in normal mode("n"), press <Esc> to clear highlights on search
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>", { desc = 'Source the current file' }) -- When in normal mode("n"), source (run) the current file(%)
+vim.keymap.set("n", "<space>x", ":.lua<CR>", { desc = 'Source the current line' })                -- When in normal mode("n"), source (run) the current line
+vim.keymap.set("v", "<space>x", ":lua<CR>", { desc = 'Source the selected line{s)' })             -- When in visual mode("v"), source (run) the selected line(s)
 
 -- auto commands
 --- Hightlight when yanking (copying) text
