@@ -33,6 +33,11 @@
 
 # Run ghostty +list-themes to view available themes.
 theme = catppuccin-mocha
+# Run ghostty +list-fonts to view available fonts.
+font-family = "JetBrainsMono NFM SemiBold"
+font-family-bold = "JetBrainsMono NFM Bold"
+font-family-italic = "JetBrainsMono NFM SemiBold Italic"
+font-family-bold-italic = "JetBrainsMono NFM Bold Italic"
 font-size = 16
 background-opacity = 0.9
 background-blur-radius = 20
