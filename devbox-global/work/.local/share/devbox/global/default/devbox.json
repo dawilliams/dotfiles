@@ -8,7 +8,8 @@
     "direnv@2.36",
     "curlie@1.7",
     "gh@2.69",
-    "jq@1.7"
+    "jq@1.7",
+    "fzf@0.62"
   ],
   "shell": {
     "init_hook": [

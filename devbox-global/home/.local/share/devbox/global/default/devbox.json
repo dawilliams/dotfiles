@@ -1,21 +1,22 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
-  "packages": [
-    "ripgrep@14.1",
-    "neovim@0.11",
-    "direnv@2.36",
-    "tree@2.2",
-    "starship@1.23",
-    "git@2.49"
-  ],
-  "shell": {
-    "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null"
+    "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
+    "packages": [
+        "ripgrep@14.1",
+        "starship@1.23",
+        "git@2.49",
+        "neovim@0.11",
+        "direnv@2.36",
+        "tree@2.2",
+        "fzf@.62"
     ],
-    "scripts": {
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
-      ]
+    "shell": {
+        "init_hook": [
+            "echo 'Welcome to devbox!' > /dev/null"
+        ],
+        "scripts": {
+            "test": [
+                "echo \"Error: no test specified\" && exit 1"
+            ]
+        }
     }
-  }
 }
