@@ -1,5 +1,4 @@
 require("config.lazy") -- lazy config must come first
-require("config.diagnostic")
 require("config.lsp")
 require("config.terminal")
 
