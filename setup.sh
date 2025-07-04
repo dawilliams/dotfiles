@@ -42,7 +42,7 @@ esac
 shared_kegs=('zsh' 'tree' 'vscode-langservers-extracted' 'docker' 'docker-compose' 'colima')
 shared_casks=('font-jetbrains-mono-nerd-font' 'ghostty' 'todoist' 'sync' 'obsidian')
 # kegs and casks only installed for the home role
-home_kegs=()
+home_kegs=('stow' 'git' 'mise')
 home_casks=('arc' '1Password' 'slack')
 # kegs and casks only installed for the work role
 work_kegs=()
@@ -73,17 +73,19 @@ for c in ${casks}; do
     /opt/homebrew/bin/brew install --cask $c
 done
 
-# Install devbox
-# https://www.jetify.com/devbox/docs/installing_devbox/
-echo "---------------------------------------------------------------------------"
-echo "Installing devbox"
-echo "---------------------------------------------------------------------------"
-curl -fsSL https://get.jetify.com/devbox | bash
+if [[ "$role" == 'work' ]]; then
+    # Install devbox
+    # https://www.jetify.com/devbox/docs/installing_devbox/
+    echo "---------------------------------------------------------------------------"
+    echo "Installing devbox"
+    echo "---------------------------------------------------------------------------"
+    curl -fsSL https://get.jetify.com/devbox | bash
 
-## May have to restart terminal first.
-cd ${HOME}/dotfiles
-# Initialize local devbox environment by running devbox shell
-echo "---------------------------------------------------------------------------"
-echo "Initialize devbox local environment"
-echo "---------------------------------------------------------------------------"
-devbox shell
+    ## May have to restart terminal first.
+    cd ${HOME}/dotfiles
+    # Initialize local devbox environment by running devbox shell
+    echo "---------------------------------------------------------------------------"
+    echo "Initialize devbox local environment"
+    echo "---------------------------------------------------------------------------"
+    devbox shell
+fi

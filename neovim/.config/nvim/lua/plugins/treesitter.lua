@@ -3,9 +3,9 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-      require 'nvim-treesitter.configs'.setup {
+      require("nvim-treesitter.configs").setup({
         -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "json" },
+        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "json", "toml" },
 
         -- Automatically install missing parsers when entering buffer
         -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
@@ -40,7 +40,14 @@ return {
           -- Instead of true it can also be a list of languages
           additional_vim_regex_highlighting = false,
         },
-      }
+      })
+      -- Only only apply the highlighting on mise files instead of all toml files
+      -- https://mise.jdx.dev/mise-cookbook/neovim.html
+      require("vim.treesitter.query").add_predicate("is-mise?", function(_, _, bufnr, _)
+        local filepath = vim.api.nvim_buf_get_name(tonumber(bufnr) or 0)
+        local filename = vim.fn.fnamemodify(filepath, ":t")
+        return string.match(filename, ".*mise.*%.toml$") ~= nil
+      end, { force = true, all = false })
     end,
-  }
+  },
 }
