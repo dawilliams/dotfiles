@@ -75,7 +75,9 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 path+=("${HOME}/.shipt")
 
 # evals
+## Mise (https://mise.jdx.dev)
+eval "$(mise activate zsh)"
 ## Starship (https://starship.rs/)
 eval "$(starship init zsh)"
 ## direnv
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
