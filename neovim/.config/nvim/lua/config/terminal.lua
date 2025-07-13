@@ -1,5 +1,3 @@
-vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>") -- Escape terminal mode by typing esc esc.
-
 -- Customize terminal options
 vim.api.nvim_create_autocmd('TermOpen', {
   desc = 'Customize Neovim Terminal Options',
