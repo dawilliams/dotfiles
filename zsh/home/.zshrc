@@ -23,12 +23,6 @@ alias rgh="rg --hidden "
 alias help="run-help"
 
 # completions
-## devbox
-if [[ ! -a $(brew --prefix)/share/zsh/site-functions/_devbox ]]; then
-    devbox completion zsh > $(brew --prefix)/share/zsh/site-functions/_devbox
-    exec zsh -l
-fi
-
 # exports
 ## colima docker replacement
 #export COLIMA_VM="default"

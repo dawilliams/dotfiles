@@ -58,15 +58,22 @@ case $arg_role[-1] in
     ;;
 esac
 
+## Get directory of this script
+## $0: This represents the path to the currently running script.
+## :a: This flag forces the path to be absolute, resolving any relative paths or symbolic links to their canonical absolute form.
+## :h: This flag extracts the "head" of the path, which corresponds to the directory containing the script.
+local script_directory="${0:a:h}"
+cd ${script_directory}
+
 ## List every directory in the current directory, removing the trailing '/'
 for config_directory in $(ls -d */ | cut -f1 -d'/') 
 do
-    ## For every directory run stow to symlink config files to the users home directory.
-    ## Check for a directory defined by the role variable. Currently either 'home' or 'work'
-    ## If the role directory exists, symlink that directory otherwise symlink the parent directory
-    if [[ -d "$config_directory/$role" ]]; then
-	stow ${action} --dir ${DEVBOX_WD}/${config_directory} --target ${HOME} ${role}
-    else
-	stow ${action} --dir ${DEVBOX_WD} --target ${HOME} ${config_directory}
-    fi
+  ## For every directory run stow to symlink config files to the users home directory.
+  ## Check for a directory defined by the role variable. Currently either 'home' or 'work'
+  ## If the role directory exists, symlink that directory otherwise symlink the parent directory
+  if [[ -d "$config_directory/$role" ]]; then
+     stow ${action} --dir ${script_directory}/${config_directory} --target ${HOME} ${role}
+  else
+     stow ${action} --dir ${script_directory} --target ${HOME} ${config_directory}
+  fi
 done

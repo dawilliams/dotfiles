@@ -1,37 +1,29 @@
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
-
+"$schema" = "https://starship.rs/config-schema.json"
 # Inserts a blank line between shell prompts
 add_newline = false
-
 # A minimal left prompt
 format = """$directory$character"""
-
 # move the rest of the prompt to the right
 right_format = """$all"""
-
 command_timeout = 1000
 
 # Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+[character]  # The name of the module we are configuring is 'character'
+success_symbol = "[➜](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 
 [git_branch]
-format =  '[$symbol$branch(:$remote_branch)]($style)'
+format = "[$symbol$branch(:$remote_branch)]($style)"
 
 # Disable the package module, hiding it from the prompt completely
-#[package]
-#disabled = true
+# [package]
+# disabled = true
 
 # Disable the aws module, hiding it from the prompt completely
-#[aws]
-#disabled = true
+# [aws]
+# disabled = true
 
 # Don't show master or main branches
-#[git_branch]
-#ignore_branches = ['master', 'main']
+# [git_branch]
+# ignore_branches = ['master', 'main']
 
-[nix_shell]
-#disabled = false
-#impure_msg = 'devbox'
-#format = 'via [$symbol$state](bold purple) '

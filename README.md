@@ -25,10 +25,6 @@ cd ~/dotfiles
 ```bash
 ./stow.sh --action stow --role [home|work]
 ```
-- Run the devbox global install command
-```bash
-devbox global install
-```
 
 - [Don't need this] Follow the [1Password CLI/App Integration](https://developer.1password.com/docs/cli/app-integration) instructions
 - Follow the [Turn on the 1Password SSH Agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) instructions
@@ -38,7 +34,6 @@ devbox global install
 
 ## What's installed
 ### Curl
-- [devbox](https://www.jetify.com/devbox/docs)
 - [homebrew](https://brew.sh)
 - [mint](https://github.com/mintoolkit/mint?tab=readme-ov-file#scripted-install)
 
@@ -53,7 +48,7 @@ devbox global install
   - [arc](https://arc.net/)
   - [slack](https://slack.com)
 
-### Devbox Global
+### Mise
 - [git](https://git-scm.com/)
 - [neovim](https://neovim.io)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
