@@ -78,3 +78,6 @@ vim.o.confirm = true
 -- vim.opt.smarttab = true
 -- vim.opt.softtabstop = 4 -- How many spaces are applied when pressing tab
 -- vim.opt.tabstop = 4 -- How many spaces are shown per tab
+
+-- Highlight the 80th column
+vim.opt.colorcolumn = "80"
