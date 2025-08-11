@@ -212,7 +212,6 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -239,6 +238,7 @@ return {
             },
           },
         },
+        gopls = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -256,6 +256,7 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        "goimports", -- A golang gofmt formatter and updates your Go import lines,
         "shellcheck", -- bash shell linter used by the bash language server (bashls)
         "shfmt", -- bash formater used by the bash language server (bashls)
         "stylua", -- Used to format Lua code
