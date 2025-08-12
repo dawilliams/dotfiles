@@ -1,11 +1,11 @@
 # This files syncs neovim and some LSPs when formatting file types
-[*.sh]
-indent_style = space
-indent_size = 2
+# https://editorconfig.org/
 
-[*.go]
+root = true
+
+[*]
 indent_size = 4
 
-[*.lua]
+[{*.lua,*.sh}]
 indent_style = space
 indent_size = 2

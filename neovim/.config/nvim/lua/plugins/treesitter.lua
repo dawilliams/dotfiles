@@ -9,6 +9,7 @@ return {
         "bash",
         "c",
         "diff",
+        "editorconfig",
         "go",
         "html",
         "lua",
