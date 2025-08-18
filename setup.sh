@@ -40,13 +40,13 @@ esac
 # Create array of kegs or casks to install with Homebrew
 # kegs and casks shared between home and work roles
 shared_kegs=('zsh' 'bash' 'coreutils' 'tree' 'stow' 'git' 'mise' 'npm' 'docker' 'docker-compose' 'colima')
-shared_casks=('font-jetbrains-mono-nerd-font' 'ghostty' 'todoist-app' 'sync' 'obsidian')
+shared_casks=('font-jetbrains-mono-nerd-font' 'ghostty' 'todoist-app' 'obsidian')
 # kegs and casks only installed for the home role
 home_kegs=()
-home_casks=('arc' '1Password' 'slack')
+home_casks=('arc' '1Password' 'slack' 'sync')
 # kegs and casks only installed for the work role
 work_kegs=()
-work_casks=()
+work_casks=(bruno)
 
 if [[ "$role" == 'home' ]]; then
     # combine the shared and role arrays into a single kegs and casks array
