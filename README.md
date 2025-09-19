@@ -30,6 +30,7 @@ cd ~/dotfiles
 - Follow the [Turn on the 1Password SSH Agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) instructions
 - Download your public key to the `~/.ssh/Github.pub` file and add Github's public key to it follow the [download the public ssh key](https://developer.1password.com/docs/ssh/agent/advanced/#use-multiple-github-accounts) instructions in the Use multiple Github accounts section.
 - Checkout obsidian vault to the Documents directory.
+- Run `luarocks install --lua-version 5.1 tiktoken_core` since is used by the [Copilot Chat plugin](https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#optional-dependencies)
 
 
 ## What's installed
