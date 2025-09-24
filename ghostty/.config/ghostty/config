@@ -32,7 +32,7 @@
 # resize-overlay-duration = 4s 200ms
 
 # Run ghostty +list-themes to view available themes.
-theme = catppuccin-mocha
+theme = Eldritch
 # Run ghostty +list-fonts to view available fonts.
 font-family = "JetBrainsMono NFM SemiBold"
 font-family-bold = "JetBrainsMono NFM Bold"
