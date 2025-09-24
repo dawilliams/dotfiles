@@ -20,6 +20,8 @@ alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | h
 ### press tab in search window to select multiple files.
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 alias nv="nvim"
+### playground for neovim config
+alias nvt='NVIM_APPNAME="nvim-test" nvim'
 ## ripgrep
 alias rgh="rg --hidden "
 ## zsh
