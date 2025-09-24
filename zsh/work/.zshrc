@@ -16,6 +16,9 @@ HELPDIR=$(command brew --prefix)/share/zsh/help
 ### Top 10 git commands. Candidates for git aliases
 alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | head -n 10'
 ## neovim
+### search for and select files using fzf to open in neovim.
+### press tab in search window to select multiple files.
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 alias nv="nvim"
 ## ripgrep
 alias rgh="rg --hidden "
@@ -70,5 +73,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(mise activate zsh)"
 ## Starship (https://starship.rs/)
 eval "$(starship init zsh)"
+## fzf (https://junegunn.github.io/fzf/)
+source <(fzf --zsh)
 ## direnv
 #eval "$(direnv hook zsh)"
