@@ -65,9 +65,6 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 #    grype ${1} > /tmp/${file_name}
 #}
 
-# path modiifictions
-path+=("${HOME}/.shipt")
-
 # evals
 ## Mise (https://mise.jdx.dev)
 eval "$(mise activate zsh)"

@@ -2,6 +2,9 @@
 # https://mac.install.guide/terminal/zshrc-zprofile
 # https://apple.stackexchange.com/questions/436314/whats-the-correct-file-to-store-environmental-variables-for-zsh
 
+# path modifications
+path+=("${HOME}/.shipt")
+
 ## Homebrew
 ### Add Homebrew to $PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
