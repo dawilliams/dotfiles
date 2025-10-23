@@ -21,7 +21,7 @@ alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | h
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 alias nv="nvim"
 ### playground for neovim config
-alias nvt='NVIM_APPNAME="nvim-test" nvim'
+alias nvt='NVIM_APPNAME="lazyvim" nvim'
 ## ripgrep
 alias rgh="rg --hidden "
 ## zsh
