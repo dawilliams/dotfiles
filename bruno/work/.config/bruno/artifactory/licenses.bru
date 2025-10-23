@@ -1,0 +1,21 @@
+meta {
+  name: licenses
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/artifactory/api/system/licenses
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{userName}}
+  password: {{password}}
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

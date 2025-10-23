@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "artifactory",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
