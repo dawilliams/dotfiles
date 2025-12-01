@@ -10,6 +10,8 @@ autoload run-help
 HELPDIR=$(command brew --prefix)/share/zsh/help
 
 # aliases
+## copilot
+  alias copilot='cd ~/dev/ln/copilot-sandbox/ && copilot'
 ## drone cli
 #alias drone="op run -- drone"
 ## git
