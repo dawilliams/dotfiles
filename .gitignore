@@ -1,3 +1,4 @@
+.DS_Store
 ssh/.ssh/known_hosts*
 ssh/.ssh/Github.pub
 docker/.docker/contexts/
