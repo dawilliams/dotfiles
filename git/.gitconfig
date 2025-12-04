@@ -3,7 +3,11 @@
 	defaultBranch = main
 
 [alias]
-	st = status
+	alias = config get --all --show-names --regexp ^alias\\.
+	c = commit
+	cl = !echo "try git_clone_and_cd <owner>/<repository> for cloning repos"
+	co = checkout
+	s = status
 
 # https://blog.gitbutler.com/how-git-core-devs-configure-git/#listing-branches
 [branch]

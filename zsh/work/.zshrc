@@ -11,12 +11,16 @@ HELPDIR=$(command brew --prefix)/share/zsh/help
 
 # aliases
 ## copilot
-  alias copilot='cd ~/dev/ln/copilot-sandbox/ && copilot'
+alias copilot='cd ~/dev/ln/copilot-sandbox/ && copilot'
 ## drone cli
 #alias drone="op run -- drone"
 ## git
 ### Top 10 git commands. Candidates for git aliases
 alias freqgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | head -n 10'
+## github cli
+alias gprd='gh pr create -f -r shipt/delivery'
+alias gprf='gh pr create -f -r shipt/finops'
+alias gpro='gh pr create -f -r shipt/ownershipt'
 ## neovim
 ### search for and select files using fzf to open in neovim.
 ### press tab in search window to select multiple files.
@@ -39,6 +43,11 @@ alias help="run-help"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # functions
+## git
+### Clone a git repository and cd into it.
+git_clone_and_cd() {
+	git clone git@github.com:"$1".git && cd $(basename "$1")
+}
 ## grype
 ### Create html page from grype scan and open it with your default browser
 #### Requires templates from the grype git repository to be local.
