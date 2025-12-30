@@ -46,7 +46,7 @@ home_kegs=()
 home_casks=('arc' '1Password' 'slack' 'sync')
 # kegs and casks only installed for the work role
 work_kegs=()
-work_casks=(bruno)
+work_casks=('bruno')
 
 if [[ "$role" == 'home' ]]; then
     # combine the shared and role arrays into a single kegs and casks array
